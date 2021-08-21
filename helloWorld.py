@@ -69,4 +69,5 @@ print(2<3, 4>5, 2<=3, 4>=5, 2==3, 4!=5)
 nome = input("Digite seu nome: ")
 peso = float(input("Digite o seu peso: "))
 
-print(nome, " seu peso é: ", peso)
+print(nome, ", seu peso é: ", peso)
+
