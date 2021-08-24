@@ -12,7 +12,7 @@ Var
  orteseAcoplada: logico
  padraoMarcha, estadoEsteira: logico
  pacienteSuspenso, estadoOrtese, estadoZeroG, sinalLuminoso: logico
- alturaSolo, coleteVestido,bora,i ,opcao, modoSuspensaoPeso2, modoZeroEstado, modoZeroEstado2 , subirDescer, op2: inteiro
+ alturaSolo, coleteVestido,bora,opcao, modoSuspensaoPeso2, modoZeroEstado, modoZeroEstado2 , subirDescer, op2: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
