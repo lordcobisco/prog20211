@@ -1,0 +1,9 @@
+1-) Quais são os recursos da linguagem de programação? Em quais situações eles são utilizados?
+
+2-) Quais são os ambientes de programação para o Python? Quais são os recursos para utilizá-los?
+
+3-) Como são adicionados comentários textos na linguagem Phyton? Quais são as variáveis do Phyton e seus tipos?
+
+4-) Quais são os comandos de entrada e saída do Phyton?
+
+5-) Como é acionada a ferramenta de debug do Phyton no VSCODE?
