@@ -1,0 +1,9 @@
+1-) O que é e qual é a função da memória em computação?
+
+2-) Cite 4 exemplos de dispositivos de entrada e outros 4 de saída
+
+3-) Descreva com suas palavras o que é um “algoritmo”
+
+4-) O que é um pseudocódigo?
+
+5-) O que é uma estrutura de decisão em um algoritmo?
