@@ -1,1 +1,18 @@
+PERGUNTA 1: Apresente situações em que haveria ganhos de produtividade em sua vida cotidiana em consequência de aprender linguagem de programação. 
+RESPOSTA 1: Escrita de textos científicos, tabulação, análise de dados, análises estatísticas, processamento de sinais biológicos para auxiliar na tomada de decisão clínica, automatização de prontuários e evoluções.
+
+PERGUNTA 2: Apresente situações em que o conhecimento de programação seria aplicável na neuroengenharia. 
+RESPOSTA 2: processamento de sinais biológicos, desenvolvimento de dispositivos em interface-cérebro máquina e neuromodulação, análises estatísticas, desenvolvimento de softwares e aplicativos.
+
+PERGUNTA 3: Descreva com suas palavras como um sistema computacional se organiza. 
+RESPOSTA 3: memória, processador, dispositivos de entrada e saída.
+
+PERGUNTA 4: Crie um pseudocódigo da sua rotina de casa até o Instituto. 
+RESPOSTA 4: Algoritmo rotina_thiago acordo pela manhã e tomo café se então <saio de casa, pego o ônibus e desço no IIN-ELS para assistir a aula> se <não houver aula do mestrado> então <pego o ônibus e desço no ANITA para atender pacientes> se <não for dia útil> então <fico estudando em casa, fazendo tarefas domésticas e convivendo com minha família> fim_se
+
+PERGUNTA 5: Descreva a importância das linguagens de programação e diferencie as linguagens por nível e por aplicação. 
+RESPOSTA 5: As linguagens servem como tradutoras, facilitando nossa interação com as máquinas, permitindo dar comandos para executar uma determinada tarefa. Linguagens de baixo nível envolvem softwares básicos e tem a função de fazer conexões rápidas e eficazes entre programas e hardwares(assembly), linguagens de médio nível (C) envolvem softwares básicos com aplicações e tem a função de portabilidade, modularidade, recursos de baixo nível e etc; linguagens de alto nível (PHP, swift, python), envolvem aplicações e tem a função de facilitar a maneira de programar para que o programador se expresse de forma mais clara.
+
+PERGUNTA 6: Apresente situações em que ferramentas de gerenciamento de projetos são necessárias. 
+RESPOSTA 6: Estruturar propostas, mensurar o progresso de trabalhos, gerenciar projetos, versionar projetos e compartilhá-los.
 
