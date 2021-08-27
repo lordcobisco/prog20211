@@ -1,1 +1,0 @@
-print ('Olá, Usuári@!\n Este programa tem como objetivo receber os dados necessários para executar seu procedimento de análise de forma automatizada.\n Seja bem-vindo!')
