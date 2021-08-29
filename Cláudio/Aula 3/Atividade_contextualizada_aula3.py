@@ -60,7 +60,7 @@ calibrarhorizontal1 = input()
 calibrarhorizontal1 = input()
 calibrarhorizontal1 = input()
 
-print ('Muito bem, agora vamos calibrar o equipamento no sentido horizontal.\nPara isso é necessário que você aperte a última letra do seu nome 10 vezes')
+print ('Muito bem, ainda vamos calibrar o equipamento no sentido horizontal.\nPara isso é necessário que você aperte a última letra do seu nome 10 vezes')
 
 calibrarhorizonta2 = input()
 calibrarhorizonta2 = input()
