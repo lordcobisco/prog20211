@@ -5,12 +5,6 @@ peso = float(input('Digite o peso do animal em quilogramas: \n'))
 dose_aplicada = float(input(' Digite o valor em ml do farmaco aplicado: \n'))
 dosagem = 0.2*peso # exemplo de que a dosagem em ml eh 20% do peso do rato
 
-while dose_aplicada != 0.2*peso:
-    
-    peso = float(input('Digite o peso do animal em quilogramas: \n'))
-    dose_aplicada = float(input(' Digite o valor em ml do farmaco aplicado: \n'))
-
-
 if dose_aplicada == dosagem:
     print('O animal estara pronto para cirurgia dentro de alguns segundos')
     
@@ -45,12 +39,21 @@ if dose_aplicada == dosagem:
                     print('Aplique uma pequena camada de poliacrilato no perimetro externo para evitar sangramentos')
 
                     # V - Escolha dos pontos de fixacao de parafusos
-
-                    anteroPosterior = 0.642
-                    lateroLateral = 0.323
-                    dorsoVentral = 0.420
+                    ap = 0.642
+                    ll = 0.323
+                    dv = 0.420
+                    anteroPosterior = float(input('Digite o valor encontrado na regua da localizacao Antero-Posterior'))
+                    lateroLateral = float(input('Digite o valor encontrado na regua da localizacao Latero-Lateral'))
+                    dorsoVentral = float(input('Digite o valor encontrado na regua da localizacao Dorso-Ventral'))
+                    ca1 = anteroPosterior - ap
+                    ca2 = lateroLateral - ll
+                    ca3 = dorsoVentral - dv 
+                    
+                    if(ca1 == 6.00 and ca2 == 3.63 and ca3 == 4.00):
+                        input('Qual dos hemisferios sera introduzida a canula?\n')
 
                         
+
 
 
 
@@ -62,9 +65,6 @@ if dose_aplicada == dosagem:
             print('Realize a higienizacao do campo de trabalho! ')
     else:
         print('Atencao: reajuste a angulacao e as hastes!\n')
-
-       
-
 else:
     print('A dose informada nao pode ser aplicada. Procedimento nao autorizado! ')
     
