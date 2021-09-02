@@ -61,7 +61,17 @@ Obs 2: Esse projeto deve ser organizado com base nos requisitos solicitados na q
 (https://slideplayer.com.br/slide/361158/)
 Obs: Não devem ser utilizadas estruturas de programação que não estejam na aula 3.
     a. Crie as variáveis necessárias para que o programa funcione corretamente.
-            
+            - Base e estrutura do microscópio;
+            - Fonte laser;
+            - Filtro óptico de intensidade;
+            - Sistema de iluminação da amostra;
+            - Lentes convergentes;
+            - Objetiva;
+            - Posicionadores dos eixos x,y e z;
+            - Divisor de feixe;
+            - Abertura circular;
+            - detector;
+            - Processador e software.
     b. Inicialize as variáveis com valores padrão adequados.
     c. Crie uma pequena mensagem de apresentação do programa para realizar uma interface
     com o usuário. Ex.: “Esse programa tem como objetivo receber dados para ...”
