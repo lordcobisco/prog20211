@@ -101,7 +101,7 @@
 dadosCovid = [[1,2,3,4,5,6],[7,8,9,10,0,1]]
 contador = 0
 
- while contador < 2:
+while contador < 2:
     if sum (dadosCovid[contador]) >= 25:
         contador =+1
         continue
