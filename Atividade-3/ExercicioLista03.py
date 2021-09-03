@@ -94,195 +94,268 @@ letraIni =nomePesquisador[0] #pega a letra incial
 comprimento = len(nomePesquisador) #comprimento do nome
 letraFim = nomePesquisador[comprimento-1]
 print(letraFim)
-contador=0
+contador1=0
+contador2=0
+contador3=0
+contador4=0
 letraSeg = nomePesquisador[1]
 letraPen = nomePesquisador[comprimento-2]
 
 
 print('[HORIZONTAL] Toque por 10X na tecla da primeira letra do seu primeiro nome')
-while (contador < 10):
-       entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
-       print('Digitou correto ? ', entradaLetraIni == letraIni)
-       print('O que você digitou? ', entradaLetraIni)
-       contador   = contador + int(entradaLetraIni == letraIni)
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraIni))
+print('Digitou correto ? ', entradaLetraIni == letraIni)
+print('O que você digitou? ', entradaLetraIni)
+contador1 = (contador1 + int(entradaLetraIni == letraIni))
+print('Quantas vezes você digitou certo: ', contador1, '\n')
+print('O usuário precisa refazer de novo a calibragem? ', not contador1==10,'\n')
+
 print('[HORIZONTAL] Toque por 10X na tecla da última letra do seu primeiro nome')
-contador = 0
-while (contador < 10):
-       entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
-       print('Digitou correto ? ', entradaLetraFim == letraFim)
-       print('O que você digitou? ', entradaLetraFim)
-       contador   = contador + int(entradaLetraFim == letraFim)
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraFim))
+print('Digitou correto ? ', entradaLetraFim == letraFim)
+print('O que você digitou? ', entradaLetraFim)
+contador2   = contador2 + int(entradaLetraFim == letraFim)
+print('Quantas vezes você digitou certo: ', contador2, '\n')
+
+print('O usuário precisa refazer de novo a calibragem? ', not contador2==10,'\n')
+
 print('[VERTICAL] Toque por 10X na tecla da segunda letra do seu primeiro nome')
-contador = 0
-while (contador < 10):
-       entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
-       print('Digitou correto ? ', entradaLetraIni == letraSeg)
-       print('O que você digitou? ', entradaLetraIni)
-       contador   = contador + int(entradaLetraIni == letraSeg)
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+entradaLetraIni = (input('Digite a letra | %s | = ' % letraSeg))
+print('Digitou correto ? ', entradaLetraIni == letraSeg)
+print('O que você digitou? ', entradaLetraIni)
+contador3   = contador3 + int(entradaLetraIni == letraSeg)
+print('Quantas vezes você digitou certo: ', contador3, '\n')
+
+print('O usuário precisa refazer de novo a calibragem? ', not contador3==10,'\n')
+
 print('[VERTICAL] Toque por 10X na tecla da penúltima letra do seu primeiro nome')
-contador=0
-while (contador < 10):
-       entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
-       print('Digitou correto ? ', entradaLetraFim == letraPen)
-       print('O que você digitou? ', entradaLetraFim)
-       contador   = contador + int(entradaLetraFim == letraPen)
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+entradaLetraFim = (input('Digite a letra | %s | = ' % letraPen))
+print('Digitou correto ? ', entradaLetraFim == letraPen)
+print('O que você digitou? ', entradaLetraFim)
+contador4   = contador4 + int(entradaLetraFim == letraPen)
+print('Quantas vezes você digitou certo: ', contador4, '\n')
+
+print('O usuário precisa refazer de novo a calibragem? ', not contador4==10,'\n')
+
+print('[<|>] ** EQUIPAMENTO ESTÁ CALIBRADO?  ', (contador1==10) & (contador2 ==10) & (contador3==10) & (contador4==10),'\n')
 
-print('[<|>] ** EQUIPAMENTO CALIBRADO **')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Kelisson Lima
