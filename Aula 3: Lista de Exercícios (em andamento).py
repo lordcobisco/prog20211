@@ -1,4 +1,4 @@
-OBSERVAÇÕES: Total de Pontos = 10 pontos com peso 7. A atividade avaliativa deve ser realizada em
+'''OBSERVAÇÕES: Total de Pontos = 10 pontos com peso 7. A atividade avaliativa deve ser realizada em
 uma folha de papel e submetida na sua respectiva pasta. Organize seus cálculos e/ou algoritmos de modo
 claro (letra legível) e sequenciado para permitir a correção. Qualquer ambiguidade será desconsiderada.
 Boa Avaliação!
@@ -35,15 +35,16 @@ disponível de forma integral em: https://repositorio.ufu.br/bitstream/123456789
 O texto apresenta algumas informações de um tipo de microscópio disponível no IIN-ELS. A partir desse
 contexto, será criado um cenário de forma que as habilidades que devem ser desenvolvidas para atingir os
 objetivos de aprendizagem da Aula 3 sejam atingidas.
-Obs: É sabido que o background dos alunos é diverso, o principal objetivo do exercício é ser capaz de
+Obs: É sabido que o background dos alunos é diverso, o princi
+pal objetivo do exercício é ser capaz de
 organizar as informações de forma estruturada e que auxilie na execução de tarefas listadas.
 
 A técnica de microscopia confocal de varredura à laser é realizada a partir de um equipamento que lê
 informações ópticas e devolve uma imagem. Porém, o equipamento em si é desenvolvido de forma a
-interagir com usuários que inserem informações e recebem informações a partir do dispositivo.
+interagir com usuários que inserem informações e recebem informações a partir do dispositivo.'''
 
 
-1. Considerando este cenário, crie um projeto organizado no git contendo:
+"""1. Considerando este cenário, crie um projeto organizado no git contendo:
     a. Milestones
     b. Issues
     c. Quadro Kanban (Aba projetos)
@@ -98,4 +99,22 @@ Obs: Não devem ser utilizadas estruturas de programação que não estejam na a
     sistema.
     l. Para verificar que o programa está funcionando corretamente, execute-o colocando um
     breakpoint na linha 15. Tire um print da tela mostrando a linha parada e as informações
-    armazenadas nas variáveis até então.
+    armazenadas nas variáveis até então."""
+
+
+
+Número_de_Superfícies = input("digite o número de superfícies a serem construídas")
+print(Número_de_Superfícies)
+
+Valor_do_Passo_no_Eixo_Y = input("digite o valor da distância entre as superfícies superfcícies")
+print(Valor_do_Passo_no_Eixo_Y)
+
+Arquivos_imagens_Superfícies = input("gerar arquivos de imagens das superfícies")
+print(Arquivos_imagens_Superfícies)
+
+Número_de_Colunas_da_Matriz= input("gerar arquivos de imagens das superfícies")
+print(Número_de_Colunas_da_Matriz)
+
+
+
+
