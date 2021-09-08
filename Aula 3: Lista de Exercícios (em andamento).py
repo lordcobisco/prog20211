@@ -103,6 +103,9 @@ Obs: Não devem ser utilizadas estruturas de programação que não estejam na a
 
 
 
+
+## CRIAÇÃO DO CÓDIGO
+
 Número_de_Superfícies = input("digite o número de superfícies a serem construídas")
 print(Número_de_Superfícies)
 
