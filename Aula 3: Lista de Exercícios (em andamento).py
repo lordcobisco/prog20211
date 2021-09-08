@@ -106,18 +106,147 @@ Obs: Não devem ser utilizadas estruturas de programação que não estejam na a
 
 ## CRIAÇÃO DO CÓDIGO
 
-Número_de_Superfícies = input("digite o número de superfícies a serem construídas")
-print(Número_de_Superfícies)
+# Number of surfaces
+Numero_de_Superficies = input("digite o número de superfícies a serem construídas")
+print(Numero_de_Superficies)
 
-Valor_do_Passo_no_Eixo_Y = input("digite o valor da distância entre as superfícies superfcícies")
+# Z-SETEP
+Valor_do_Passo_no_Eixo_Y = input("digite o valor da distância entre as superfícies")
 print(Valor_do_Passo_no_Eixo_Y)
 
-Arquivos_imagens_Superfícies = input("gerar arquivos de imagens das superfícies")
+# GERAR SURFACE_xx.DAT
+Arquivos_imagens_Superficies = input("gerar arquivos de imagens das superfícies")
 print(Arquivos_imagens_Superfícies)
 
-Número_de_Colunas_da_Matriz= input("gerar arquivos de imagens das superfícies")
+
+
+Numero_de_Colunas_da_Matriz= input("gerar arquivos de imagens das superfícies")
 print(Número_de_Colunas_da_Matriz)
 
+# c. Crie uma pequena mensagem de apresentação do programa para realizar uma interface com o usuário. Ex.: “Esse programa tem como objetivo receber dados para ...”
+print(Esse programa tem como objetivo receber dados para gerar imagens de objetos complexos com alta resolução e em formato tridimensional)
 
 
+# e. Para cada informação digitada, apresente na tela a seguinte mensagem: “Houve alteração na variável inserida? ”. 
+# e. Após a mensagem, apresentar verdadeiro ou falso com base no que foi digitado pelo usuário e o que estava armazenado na variável. Obs.: Não deve ser utilizado if aqui.'''
+
+Alteracao_de_variavel = input("Houve alteração na variável inserida?")
+print(Alteracao_de_variavel)
+
+var_logica1 '''com base no que foi digitado pelo usuário e o que estava armazenado na variável'''= True
+var_logica2 '''com base no que foi digitado pelo usuário e o que estava armazenado na variável'''= False
+print("valor de 'var_logica1 ou var_logica2': ", var_logica1 or var_logica2)
+
+#f. Retorne ao usuário de forma organizada as informações que foram digitadas. Ex.: “As informações de configurações setadas pelo usuário são: ...”
+
+print("o número de superfícies informado foi: %s e o valor da distância entre as superfícies digitado foi %s:" %(Numero_de_Superficies, Valor_do_Passo_no_Eixo_Y)) #ainda não está finalizado, mas a lógica é mais ou menos essa.
+
+# g. Após setada as configurações iniciais o usuário deve utilizar dois caracteres para a calibração do equipamento no sentido horizontal. Para isso, ele deve apertar a tecla
+#correspondente à primeira letra do seu nome 10x e à última letra do seu nome 10x.
+
+Nome_Usuario = input("Digite o seu nome")
+print(Nome_Usuario)
+Nome_Usuario[0]
+
+
+'''1''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+    
+'''2''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''3''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''4''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''5''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''6''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''7''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''8''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''9''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+
+'''10''' Calibracao_do_equipamento = input("Digite a primeira letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [0] = True
+                      != [0] = False
+            
+            
+'''1''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''2''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''3''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''4''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''5''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''6''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''7''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''8''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''9''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
+            
+'''10''' Calibracao_do_equipamento = input("Digite a última letra do seu nome")
+         print(Calibracao_do_equipamento)
+         Nome_Usuario == [-1] = True
+                      != [-1] = False
 
