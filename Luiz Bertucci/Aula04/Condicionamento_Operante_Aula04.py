@@ -2,7 +2,6 @@
 Fundamentos de Programação - IINELS
 Atividade Contextualizada 04 - Condicionamento Operante
 Nome: Luiz Henrique Bertucci
-Site com informações Microscópio https://www.olympus-lifescience.com/pt/laser-scanning/fv3000/#!cms[focus]=cmsContent2543
 '''
 habituado = False
 aprox_init = 30 #cm
