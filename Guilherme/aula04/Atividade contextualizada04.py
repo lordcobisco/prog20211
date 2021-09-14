@@ -13,17 +13,15 @@ print('Comportamento condicionado de animais')
 print ('Fase 1 - Habituação')
 
 habituado = int (input ('O animal já está habituado?\nPressione s para sim e n para não.\n'))#Dependendo da resposta do usuario teremos duas opções a seguir.
-if habituado
 print('Que bom, vamos para a proxima etapa')
-#Caso o animal não esteja habituado
-else: print('Habitue o animal e em seguida retorne')
-#Continuando
+
 print('Inicio etapa 2')
-#Distancia padrao = 30.
+
+Distanciapadrao = 30.
 distanciaAtual = int (input ('Qual a distância entre o animal e a barra em centímetros?\n'))
-if 1<distanciaAtual<distanciaPadrao:
+if 1<distanciaAtual<Distanciapadrao:
     print (' O animal se aproximou!\nFoi liberado 0,5ml de rec.')
-elif distanciaAtual==distanciaPadrao:
+elif distanciaAtual==Distanciapadrao:
     print ('O animal não se aproximou nem se afastou!\nAguarde até o tempo final estimado.')
 elif distanciaAtual==0:
     print ('O animal chegou a barra!\nContinuar para próxima etapa!')
