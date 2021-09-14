@@ -39,20 +39,51 @@ if dose_aplicada == dosagem:
                     print('Aplique uma pequena camada de poliacrilato no perimetro externo para evitar sangramentos')
 
                     # V - Escolha dos pontos de fixacao de parafusos
-                    ap = 0.642
-                    ll = 0.323
-                    dv = 0.420
+
+                    parafusos = int(input('Determine o ponto de fixacao dos implantes!\n'))
+                    giros = 1
+
+                    for i in range(1,4):
+                        print('Foram realizados ', i, 'giros para fixacao do implante.')
+                    
+                    ap = 6.42
+                    ll = 3.63
+                    dv = 4.20
+
                     anteroPosterior = float(input('Digite o valor encontrado na regua da localizacao Antero-Posterior'))
                     lateroLateral = float(input('Digite o valor encontrado na regua da localizacao Latero-Lateral'))
                     dorsoVentral = float(input('Digite o valor encontrado na regua da localizacao Dorso-Ventral'))
+                    
                     ca1 = anteroPosterior - ap
                     ca2 = lateroLateral - ll
                     ca3 = dorsoVentral - dv 
-                    
-                    if(ca1 == 6.00 and ca2 == 3.63 and ca3 == 4.00):
-                        input('Qual dos hemisferios sera introduzida a canula?\n')
+                                        
+                    print('Realize o procedimendo de perfuracao.\n')
+                    print('Apoie a mao que segura a broca contra o assoalho e perfure o cranio em uma angulacao de aproximadamente 45 graus.\n')
+                    print('Introduza a canula no hemisferio desejado.\n')
 
+                    canula1 = 0
+    
+                    while (canula1 != dv):
+                        canula1 += 1
+                        print("Introducao da canula 1.")
+                    
+                    if canula1 == dv:
+                        print("A canula 1 foi inserida.")
                         
+                    print("Atencao! Drene qualquer sangue ou líquido que extravase pelo orifício criado no crânio.")
+                    print("Misture de acrílico polimerizante com o solvente para fazer um capacete.")
+                    
+                    canula2 = 0
+                    
+                    while (canula2 != dv):
+                        canula2 += 1
+                        print("Introducao da canula 2.")
+                    
+                    if canula2 == dv:
+                        print("A canula 2 foi inserida.")
+                        
+                    print ("O procedimento chegou ao fim!")
 
 
 
