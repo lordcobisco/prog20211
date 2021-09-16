@@ -17,44 +17,46 @@ dados_tupla = (estados,populacao,casos,obitos)
 
 
 if 'RJ' in dados_lista[0]:
-    print("Numero de casos no estado do Rio de Janeiro eh de: ", dados_lista[9][3])
+    print("Numero de casos no estado do Rio de Janeiro em lista eh de: ", dados_lista[3][9])
 
 if 'RJ' in dados_tupla[0]:
-    print("Numero de casos no estado do Rio de Janeiro eh de: ",dados_tupla[9][3])
+    print("Numero de casos no estado do Rio de Janeiro eh em tupla eh de: ",dados_tupla[3][9])
 
 # obitos acumulados
 
-print(dados_lista[0][0],dados_lista[4][0])
-print(dados_lista[0][1],dados_lista[4][1])
-print(dados_lista[0][2],dados_lista[4][2])
-print(dados_lista[0][3],dados_lista[4][3])
-print(dados_lista[0][4],dados_lista[4][4])
-print(dados_lista[0][5],dados_lista[4][5])
-print(dados_lista[0][6],dados_lista[4][6])
-print(dados_lista[0][7],dados_lista[4][7])
-print(dados_lista[0][8],dados_lista[4][8])
-print(dados_lista[0][9],dados_lista[4][9])
+print(dados_lista[0][0],dados_lista[3][0])
+print(dados_lista[0][1],dados_lista[3][1])
+print(dados_lista[0][2],dados_lista[3][2])
+print(dados_lista[0][3],dados_lista[3][3])
+print(dados_lista[0][4],dados_lista[3][4])
+print(dados_lista[0][5],dados_lista[3][5])
+print(dados_lista[0][6],dados_lista[3][6])
+print(dados_lista[0][7],dados_lista[3][7])
+print(dados_lista[0][8],dados_lista[3][8])
+print(dados_lista[0][9],dados_lista[3][9])
 
-print(dados_tupla[0][0],dados_tupla[4][0])
-print(dados_tupla[0][1],dados_tupla[4][1])
-print(dados_tupla[0][2],dados_tupla[4][2])
-print(dados_tupla[0][3],dados_tupla[4][3])
-print(dados_tupla[0][4],dados_tupla[4][4])
-print(dados_tupla[0][5],dados_tupla[4][5])
-print(dados_tupla[0][6],dados_tupla[4][6])
-print(dados_tupla[0][7],dados_tupla[4][7])
-print(dados_tupla[0][8],dados_tupla[4][8])
-print(dados_tupla[0][9],dados_tupla[4][9])
+print(dados_tupla[0][0],dados_tupla[3][0])
+print(dados_tupla[0][1],dados_tupla[3][1])
+print(dados_tupla[0][2],dados_tupla[3][2])
+print(dados_tupla[0][3],dados_tupla[3][3])
+print(dados_tupla[0][4],dados_tupla[3][4])
+print(dados_tupla[0][5],dados_tupla[3][5])
+print(dados_tupla[0][6],dados_tupla[3][6])
+print(dados_tupla[0][7],dados_tupla[3][7])
+print(dados_tupla[0][8],dados_tupla[3][8])
+print(dados_tupla[0][9],dados_tupla[3][9])
 
 # Sobrescrevendo os dados PB
 
-if 'PB' in dados_lista[0]:
-    dados_lista[7][9] = dados_lista[7][9] + 10
+if 'PB' in dados_lista[3]:
+    dados_lista[3][7] = dados_lista[3][7] + 10
     print("Os dados da Paraiba foram corrigidos!")
     print(dados_lista)
+ 
+print("Os dados da Paraiba foram corrigidos!")
 
-if 'PB' in dados_tupla[0]:
-    dados_tupla[7][9] = dados_tupla[7][9] + 10
+if 'PB' in dados_tupla[3]:
+    dados_tupla[3][7] = dados_tupla[3][7] + 10
     print("Os dados da Paraiba foram corrigidos!")
     print(dados_tupla)
     
@@ -79,15 +81,18 @@ print(dados_lista)
 
 # Soma dos dados
 
-soma_ES = [sum(dados_ES[1]),sum(dados_ES[2]),sum(dados_ES[3]),sum(dados_ES[4])]
+soma_ES = (sum(obitos_ES))
 
+print(soma_ES)
+
+'''
 if (soma_ES[0] == dados_lista[1][0]):
     if(soma_ES[1] == dados_lista[2][0]):
         if(soma_ES[2] == dados_lista[3][0]):
             if(soma_ES[3] == dados_lista[4][0]):
-                    print("As somas são iguais.")
+                    print("As somas sao verdeiras.")
                     
-print ("O tamanho da lista é: ", len(dados_lista))
+print ("O tamanho da lista: ", len(dados_lista))
 
 #Valores dos óbitos
 
@@ -99,3 +104,10 @@ dicionario_ES = {'Afonso Cláudio: ', dados_ES[3][0], 'Alegre:', dados_ES[3][1],
 
 municipio = input("Digite o nome do município que você deseja saber a quantidade de casos novos?\n")
 print("O municipio: ",municipio," registrou ",dicionario_ES[municipio]," casos.")
+'''
+
+# Extraindo dados de CE
+
+casos_CE = dados_lista[3][6]
+
+print(' Casos no Ceara:', casos_CE) 
