@@ -85,7 +85,6 @@ soma_ES = (sum(obitos_ES))
 
 print(soma_ES)
 
-'''
 if (soma_ES[0] == dados_lista[1][0]):
     if(soma_ES[1] == dados_lista[2][0]):
         if(soma_ES[2] == dados_lista[3][0]):
@@ -104,7 +103,6 @@ dicionario_ES = {'Afonso Cláudio: ', dados_ES[3][0], 'Alegre:', dados_ES[3][1],
 
 municipio = input("Digite o nome do município que você deseja saber a quantidade de casos novos?\n")
 print("O municipio: ",municipio," registrou ",dicionario_ES[municipio]," casos.")
-'''
 
 # Extraindo dados de CE
 
