@@ -188,3 +188,4 @@ print('\nOs novos óbitos da cidade do Piauí em Teresina é de', casosNovosPI['
 
 # lista2 = (lista[6],lista[20],lista[34],lista[47],lista[61],lista[75],lista[88],lista[102],lista[116],lista[130],lista[144],lista[158],lista[172],lista[186],lista[200],lista[214],lista[228],lista[242],lista[256],lista[270],lista[284],lista[298],lista[312],lista[326],lista[340],lista[354],lista[368],lista[382],lista[396],lista[410],lista[424],lista[438],lista[452],lista[466],lista[480],lista[494],lista[508],lista[522],lista[536],lista[550],lista[564],lista[578],lista[592],lista[606],lista[620],lista[634],lista[648],lista[662],lista[676],lista[690],lista[704],lista[718])
 # lista.remove(lista2)
+# Não foi usado for porque só foi utilizado na aula 6
