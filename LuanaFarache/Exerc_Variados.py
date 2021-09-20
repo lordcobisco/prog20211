@@ -1,21 +1,20 @@
-# Este programa irá calcular o seu IMC
+# Exemplo de identação
 
-Nome = input("Digite seu nome: ")
-Peso = float(input("Digite o seu peso: "))
-Altura = float(input("Digite sua altura: "))
-IMC = Peso/Altura**2
-
-print(Nome, Peso, Altura)
-print(Nome, ", seu IMC é: ", IMC)
-
-# Atualização do programa usando estruturas de decisão:
+'''
+def main () : # Pode usar outro nome que nao "main", mas convencionaremos "main"
+  num1 = int(input())
+  num2 = int(input())
+  print(num1+num2)
+# note a indentacao dessa linha => NAO pertence ao bloco de comandos da funcao "main"
+main()
+'''
 
 Nome = input("Digite seu nome: \n")
 Peso = float(input("Digite o seu peso: \n"))
 Altura = float(input("Digite sua altura: \n"))
 IMC = Peso/(Altura**2)
 
-print("Seu IMC é = ", IMC)
+print("IMC = ", IMC)
 
 if IMC < 17:
     print("Você está muito abaixo do peso estimado!\n")
