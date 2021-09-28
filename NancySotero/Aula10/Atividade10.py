@@ -1,6 +1,5 @@
 import random
-
-from audiomath import Sound, Player, Stack, Concatenate, StretchAndShift
+from audiomath import Sound, Player, Concatenate, StretchAndShift
 
 def duplicarCanais (som):
     som *= [1.0,1.0]
@@ -12,18 +11,18 @@ def limitarCanais (som):
 
 #Defina os parametros
 
-paramTempo = float(input("Tempo do estimulo em MS"))
-paramISI = float(input("ISI (Tempo entre estimulos) em MS"))
-paramQuant = float(input("Quantidade de estimulos:"))
-paramProp = float(input("Digite a proporcao do estimulo raro. Ex: 0.2 (20%)"))
-paramFreq = float(input("Digite a frequencia da aquisição em HZ"))
+paramTempo = float(input("Tempo do estimulo em ms: "))
+paramISI = float(input("ISI (Tempo entre estimulos) em ms: "))
+paramQuant = float(input("Quantidade de estimulos: "))
+paramProp = float(input("Digite a proporcao do estimulo raro. Ex: 0.2 (20%): "))
+paramFreq = float(input("Digite a frequencia da aquisição em Hz: "))
 
 #Importar os Estimulos
 
 estimulo01 = Sound('Ba.wav')
 estimulo02 = Sound('DaHigh.wav')
 
-#Informaçoes dos audios pré-Concatenização
+#Informaçoes dos audios pré-Manipulação
 print("Informações dos estimulos pré manipulação: ", estimulo01, estimulo02)
 
 #Caso haja apenas 1 canal, criação de novos canais.
@@ -55,9 +54,7 @@ estimulo02 = (paramISI/1000) % estimulo02
 
 #RiseDecay - A Implementar
 
-#Criação de Faixa Final com Repetições Adequadas e Aleatórias
-
-#Informaçoes dos audios pós-Concatenização
+#Informaçoes dos audios pós-Manipulação
 
 print("Informações dos estimulos pós manipulação: ", estimulo01, estimulo02)
 
@@ -83,4 +80,4 @@ AmostraSalva = Sound(fs=paramFreq)
 for i in range (int(paramQuant)):
     AmostraSalva = AmostraSalva % faixafinal[i]
 
-#AmostraSalva.Write('arquivo_teste_01.wav')
+AmostraSalva.Write('arquivo_teste_01.wav')
