@@ -19,9 +19,9 @@ print (vetornumpy.dtype.name)
 
 
 
-import numpy as np
-print(np.zeros(3,4))
-a =[]
-a. append
+#import numpy as np
+#print(np.zeros(3,4))
+#a =[]
+#a. append
 
 
