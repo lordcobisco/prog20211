@@ -98,7 +98,7 @@ np.random.seed(23123123)
 
 N_points = 100000
 n_bins = 20
-x = np.random.randm(N_points)
+x = np.random.randn(N_points)
 fig, ax = plt.subplots(1,1)
 ax.hist(x,n_bins)
 plt.show
