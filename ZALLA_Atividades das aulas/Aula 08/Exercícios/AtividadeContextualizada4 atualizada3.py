@@ -73,7 +73,7 @@ def treinamentoVerificacao(proxFase):
     else:
         print("Perfeito, o animal pode seguir para a próxima fase.")
         informacoesAnimal['Verificação'].append('O experimento foi feito com sucesso 50 vezes e dentro de 30 min.')
-        print("\nFim do programa de treinamento.")
+        print("\nFim do programa de treinamento.\n")
 
 # Habituação do animal (fase de habituação)
 
@@ -108,34 +108,40 @@ if faseSons == [True]:
 if verificacao == [True]:
     treinamentoVerificacao(input("Os experimentos foram realizados com sucesso 50 vezes e dentro de 30 minutos? [s/n] "))
 else:
-   print("\nFim do programa de treinamento.")
+   print("\nFim do programa de treinamento.\n")
 
 # Salvar as informações geradas:
 
 modo_salvar = input("Você deseja salvar as informações do treinamento do animal em que formato? [csv/txt] ")
 nome_arquivo = input("Qual o nome que deseja dar para o referido arquivo? ")
 
-if modo_salvar == 'csv':
-    import csv
+while modo_salvar != 'csv' and modo_salvar != 'txt':
+    modo_salvar = input('Desculpe, não entendi o formato que você deseja. Digite um formato adequado: [csv/txt] ')
 
-    with open((nome_arquivo+'.csv'),'w',newline='') as arquivo_csv:
-        arquivo_escrita = csv.writer(arquivo_csv,delimiter=',')
+else:
+    if modo_salvar == 'csv':
+        import csv
 
-        arquivo_escrita.writerow(['Habituação'] + ['Aproximação 1'] + ['Aproximação 2'] + ['Aproximação 3'] + ['Sons'] + ['Verificação'])
-        arquivo_escrita.writerow([informacoesAnimal['Habituação']] + [informacoesAnimal['Aproximação 1']] + [informacoesAnimal['Aproximação 2']]
-         + [informacoesAnimal['Aproximação 3']] + [informacoesAnimal['Sons']] + [informacoesAnimal['Verificação']])
+        with open((nome_arquivo+'.csv'),'w',newline='') as arquivo_csv:
+            arquivo_escrita = csv.writer(arquivo_csv,delimiter=',')
 
-    print('Os dados já foram salvos no formato .csv.')
+            arquivo_escrita.writerow(['Habituação'] + ['Aproximação 1'] + ['Aproximação 2'] + ['Aproximação 3'] + ['Sons'] + ['Verificação'])
+            arquivo_escrita.writerow([informacoesAnimal['Habituação']] + [informacoesAnimal['Aproximação 1']] + [informacoesAnimal['Aproximação 2']]
+            + [informacoesAnimal['Aproximação 3']] + [informacoesAnimal['Sons']] + [informacoesAnimal['Verificação']])
 
-elif modo_salvar == 'txt':
+        print('Os dados já foram salvos no formato .csv.')
 
-    arquivo_txt = open((nome_arquivo+'.txt'),'w')
+    elif modo_salvar == 'txt':
 
-    arquivo_txt.write('Habituação: '+str(informacoesAnimal['Habituação'])+'\n')
-    arquivo_txt.write('\nAproximação 1: '+str(informacoesAnimal['Aproximação 1'])+'\n')
-    arquivo_txt.write('\nAproximação 2: '+str(informacoesAnimal['Aproximação 2'])+'\n')
-    arquivo_txt.write('\nAproximação 3: '+str(informacoesAnimal['Aproximação 3'])+'\n')
-    arquivo_txt.write('\nSons: '+str(informacoesAnimal['Sons'])+'\n')
-    arquivo_txt.write('\nVerificação: '+str(informacoesAnimal['Verificação'])+'\n')
+        arquivo_txt = open((nome_arquivo+'.txt'),'w')
 
-    print('Os dados já foram salvos no formato .txt.')
+        arquivo_txt.write('Habituação: '+str(informacoesAnimal['Habituação'])+'\n')
+        arquivo_txt.write('\nAproximação 1: '+str(informacoesAnimal['Aproximação 1'])+'\n')
+        arquivo_txt.write('\nAproximação 2: '+str(informacoesAnimal['Aproximação 2'])+'\n')
+        arquivo_txt.write('\nAproximação 3: '+str(informacoesAnimal['Aproximação 3'])+'\n')
+        arquivo_txt.write('\nSons: '+str(informacoesAnimal['Sons'])+'\n')
+        arquivo_txt.write('\nVerificação: '+str(informacoesAnimal['Verificação'])+'\n')
+
+        arquivo_txt.close()
+
+        print('Os dados já foram salvos no formato .txt.')
