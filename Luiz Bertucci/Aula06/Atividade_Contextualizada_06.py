@@ -62,9 +62,9 @@ for i in range(12):
 
 print('\n*******Ajuste das cânulas********\n')
 #AP = 6, LL = 3.03, DV = 4
-localização = { 'AnteroPosterior' : 6, 'LateroLateral': 3.03, 'DorsoVentral':4}
+localizacao = { 'AnteroPosterior' : 6, 'LateroLateral': 3.03, 'DorsoVentral':4}
 print('Realize a furação da meninge com angulação de aproximadamente 45º\n' )
-print('localização para inserção em centrímetros: ', localização)
+print('localização para inserção em centrímetros: ', localizacao)
 
 print('\n Drenar qualquer sangue ou líquido cefalorraquidiano nos orifícios ')
 print('\nInserir o capacete feito com a mistura de acrílico polimerizante e solvente')
