@@ -1,0 +1,68 @@
+\documentclass{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+\title{Análise de um sistema de código aberto, malha-fechada e em tempo real para interrupção das sharp-wave ripple do hipocampo}
+\author{Resumo do trabalho apresentado na disciplina de fundamentos em programação
+
+Cláudio José Mendes Júnior}
+
+\maketitle
+
+\section{Introdução}
+\label{sec:introduction}
+Historicamente, para poder estabelecer relações causais entre regiões neurais e funções cognitivas, o padrão-ouro seria estudar lesões com alvo preciso. Contudo, ferramentas modernas como optogenética e quimiogenética permitiram tais alterações com um efeito reversível e direcionado a células específicas.
+
+Entretanto, padrões específicos de atividade neural ou modos de representação estão presentes em períodos distintos e por tempo limitado. Ambas as técnicas citadas anteriormente não apresentam uma resposta temporal tão responsiva. As vezes, os padrões de interesse são breves "eventos em conjunto", apresentando duração inferior a um segundo. Sharp-wave ripples são breves períodos de oscilação elevada em 150-250 Hz no potencial de campo local (LFP), proeminentes na área CA1 do hipocampo.  Então, testes que relacionam causa e efeito requerem a capacidade de interagir com o cérebro através de circuito de malha fechada, onde o mesmo será responsável por detectar e alterar a atividade neural apenas nos momentos desejados. Expressando não só uma alta precisão, mas também baixa latência.
+
+Sistemas de malha-fechada utilizados para detectar e alterar padrões temporalmente distintos de atividade neural, combinam algoritmo(software) e componentes computacionais físicos(hardware). Existem três desafios principais para análises em nível de sistema que são: aquisição de dados; exploração de parâmetros durante o experimento in vivo em andamento e as propriedades dos sinais são resistentes às teorias clássicas de detecção que dependem de "sinal" e "ruído".
+
+Portanto, o objetivo do trabalho é apresentar um sistema de código aberto desenvolvido para detectar sharp-wave ripples (SWRs) e desencadear alterações na atividade contínua. Este sistema foram desenvolvidos e usados para investigar a relação causal entre a atividade neural durante as SWRs na aprendizagem, consolidação e memória de trabalho.
+
+\section{Metodologia}
+\subsection{Animal usado}
+O estudo utilizou ratos Long Evans macho implantados com uma matriz de micro-drive com tertrodos ajustáveis independentes em coordenadas específicas. A captação da atividade neural mínima foi usada foi como um dispositivo de referência digital e subtraído todos os eletrodos.
+
+\subsection{Estrutura do sistema}
+A arquitetura experimental é um sistema de malha-fechada que inicia com o processo de aquisição de dados através de um pulso digital acionado em tempo real através da detecçao da SWRs. Os dados então são passados para uma unidade de aquisição de dados Open Ephys ou SpikeGadgets que faz interface com um software suite Trodes para o qual foi desenvolvido um módulo de detecção de SWR. Após a detecção da SWR, o módulo dispara uma estimulaçã com um pulso digital via Ethernet contectado a um microcontrolador BeagleBone.
+
+\subsection{Aquisição de dados}
+Os dados são coletados a partir de eletrodos que se conectam a um headstage que digitaliza o sinal LFP analógico bruto por meio de um conversor analógico-digital integrado. Após essa conversão, o sinal é emitido para um computador e então processado. 
+
+\subsection{Processamento de dados e gatilho de estimulação}
+Utilizando o Trodes (pacote modular de código aberto e plataforma cruzada) escrito em QT/C++ fui utilizado para aquisição e processamento de sinal. Trata-se de um processo multi-threaded com threads ligando a unidade de aquisição de dados e o envio de dados para exibição e registro em tempo real. O threaded do Stream Processor então envia os dados filtrados conforme solicitado pelos módulos conectados via UDP. Assim que uma quantidade suficiente de canais detectarem ondulações dentro de 15ms para o Stimulation Handler, um segmento separado inicia a estimulação comunicando-se com o microcontrolador BeagleBone Black por Ethernet. Esse microcontrolador então emite um pulso digital de 3,3 volt para uma quantidade especifica de tempo para então acionar o mecanismo de interrupção para intervir no loop. Após detecção e subtração do sinal digital de referência, este sinal foi filtrado em banda de LFP com um filtro passa-baixa de Bessel de 400Hz de resposta ao impulso.
+
+\subsection{Algoritmos de detecção}
+Posteriormente, o sinal foi dizimado e a banda ondulada filtrada com um filtro de 25(150-250Hz). Após outras análises, a potência instantânea do sinal filtrado da banda ondulada foi então calculado por meio de uma Transformada de Hilbert e ainda mais suavizado com um Gaussiano de kernel com um desvio padrão de 4 ms.
+
+\subsection{testes em tempo real}
+\subsubsection{Sintético}
+Uma análise sintética foi realizada antes dos testes in vivo utilizando um conjunto de dados ondulados sintéticos para validar a eficácia do algoritmo e determinar as qualificações de latência da linha de base. Para replicar a dinâmica de ruído neural CA1 dentro das bandas de frequência de ondulação (150-250 Hz),foi gerado um processo de ruído branco e, em seguida, ocorreu a filtragem para a banda de ondulação. Os eventos de ondulação foram então injetados no sinal sintético. O conjunto final, após todos aprimoramentos para deixá-lo mais fidedigno, resultou em um arquivo 15 minutos com 500 ondulações injetadas, sendo então convertido em um arquivo de áudio .wav e reproduzido e reproduzido em tempo real via sistema PCB customizada encurtando todos os canais do palco para um cabo auxiliar de entrada.
+
+\subsubsection{In vivo}
+Para um teste in vivo do sistema, um rato foi colocado dentro de uma caixa de dormir e, em seguida, , conectado à unidade de controle principal do SpikeGadgets por meio de um SpikeGadgets HH128 headstage. Os dados foram registrados em duas sessões que duravam entre 60-90 minutos, sendo três sessões separadas, afim de testar duas modalidades diferentes do algoritmo  e para geração de dados sintéticos. Como no sintético, todos os dados foram registrados durante cada sessão de coleta de dados.Por último, é importante notar que antes das sessões de gravação, o rato explorou um campo aberto com novos objetos e recompensas ocultas para aumentar a prevalência de SWRs.
+
+\subsection{Análise dos dados}
+Todas as análises foram feitas com scripts Python personalizados, umaversão modificada do pacote nelpy e programas C ++ 11 personalizados. Ambos os códigos de análise e os dados das figuras estão disponíveis publicamente em https://www.github.com/shayokdutta/RippleDetectionAnalysis.
+
+\section{Resultados}
+O desempenho do sistema e algoritmo por meio de cinco métricas diferentes: taxa de verdadeiro positivo (TPR), taxa de descoberta falsa, taxa de estimulação falsa (FSR),latência de detecção e latência de detecção relativa. Todas as métricas, exceto descoberta falsa taxa, foram avaliados em dados sintéticos e in vivo.
+
+Como esperado, as detecções das ondulações sintéticas eram idênticas às nossas simulações, porém, com uma latência almentada. Já para os dados reais, como a quantidade de eventos verdadeiros, foi calculada uma taxa de estimualção falsa para dar uma caracterização informativa de quanto tempo estamos interrompendo a propagação de informações de
+o hipocampo durante um período de tempo.
+
+
+\section{Conclusão}
+Na última década, estudos de ruptura elétrica e optogenética tem estabelecido um papel fundamental para SWRs nos processos de aprendizagem e memória. No entanto, as caracterizações de desempenho dos sistemas de detecção de SWR em tempo real não tem sido discutido. Aqui, foi apresentado e avaliado um sistema de código aberto, malha-fechada e em tempo real para detecção de SWR e potencial intervenção.
+
+\section{Referência}
+Dutta S, Ackermann E, Kemere C. Analysis of an open source, closed-loop, realtime system for hippocampal sharp-wave ripple disruption. J Neural Eng. 2019 Feb;16(1):016009. doi: 10.1088/1741-2552/aae90e. Epub 2018 Dec 3. PMID: 30507556.
+
+\end{document}
