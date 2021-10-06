@@ -1,0 +1,9 @@
+AULA 2 - 4 Perguntas formuladas sobre Aprendizagem:
+
+1-) QUais são as ferramentas para auxiliar o desenvolvimento de softwares?
+
+2-) Como criar "passo a passo" um repositório para armazenar projetos colaborativos no GitHub?
+
+3-) Quais sãao as vantagens para o uso da ferramenta Git em projetos de Neuroengenharia?
+
+4-) Descreva o fluxo de trabalho do gerente de integração de uma IDE.
