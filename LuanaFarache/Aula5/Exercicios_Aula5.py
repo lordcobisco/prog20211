@@ -114,22 +114,22 @@ EXEMPLO:
 # print(Strings[0:2]) # 2 elementos a partir da 1º posição da tupla = "Maria", "João"
 
 
-# Dicionário = {}
-Dicionário = dict()
-Dicionário['biblioteca'] = 'Estantes'
-# print(Dicionário)
-# print(Dicionário['biblioteca']) # Neste caso a saída será Estantes, pois 'biblioteca' é a "chave" que acessa 'estantes'
+Dicionário = {}
+# Dicionário = dict()
+# Dicionário['biblioteca'] = 'Estantes'
+# # print(Dicionário)
+# # print(Dicionário['biblioteca']) # Neste caso a saída será Estantes, pois 'biblioteca' é a "chave" que acessa 'estantes'
 
-# Dicionário ['biblioteca'] = {'Estantes' : [1,2,3,4,5,6,7,8]} # dicionário contendo outro dicionário
-# print(Dicionário)
+Dicionário ['biblioteca'] = {'Estantes' : [1,2,3,4,5,6,7,8]} # dicionário contendo outro dicionário
+print(Dicionário)
 # print(Dicionário['biblioteca']) #Para acessar todos os itens do dicionário
 # print(Dicionário['biblioteca']['Estantes']) #Para acessar os itens referentes a estantes dentro do dicionário biblioteca
 # print(Dicionário['biblioteca']['Estantes'][0]) # Acessar o 1º item referente a estantes
 # print(Dicionário.keys())
 # print(Dicionário['biblioteca'].keys()) # Localiza os elementos(keys) contidos em um dicionário
 # print(Dicionário['biblioteca'].items()) # Localiza os itens contidos em um dicionário.
-print(Dicionário.get('biblioteca',None)) 
-print(Dicionário.get('Estantes',None))
-print(Dicionário['Estantes']) # Desta forma da erro, pois estantes não existe
+# print(Dicionário.get('biblioteca',None)) 
+# print(Dicionário.get('Estantes',None))
+# print(Dicionário['Estantes']) # Desta forma da erro, pois estantes não existe
 
 
