@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Desenvolvimento de um sistema para mensuração e análise
+de ângulos articulares}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Objetivo}
+Desenvolver um sistema de acesso aberto para mensuração de ângulos articulares sem fio utilizando sensores inerciais.
+
+\section{Métodos}
+Foi desenvolvido um sistema dividido em dois módulos: o dispositivo para mensuração de ângulos Joint Angle Measurement and Acquisition device (JAMA), e uma biblioteca de programação para análise dos dados batizada de Python for Joint Angle Measurement and Acquisition (PyJama).
+
+O JAMA mensura ângulos articulares utilizando um sensor posicionado acima e o outro abaixo da articulação, deste modo ele pode mensurar o ângulo entre qualquer segmento corporal em que seja possível posicioná-lo. O PyJama foi desenvolvido para ser uma ferramenta para tratamento e visualização de dados do JAMA ou de outros dispositivos e por meio de diferentes técnicas e algoritmos. A análise dos dados de sensores inerciais requer um tratamento rigoroso pois precisa realizar checagem da integridade dos dados, filtragem do sinal para remoção de ruídos e calibração dos sensores-pré-processamento dos dados. Após essa verificação, os dados devem ser integrados para estimar a orientação de cada sensor e, posteriormente, estimar o ângulo articular. 
+
+Para realizar a prova de conceito do sistema desenvolvido foram realizados 4 experimentos. O primeiro com o intuito de testar as medições feitas pelo JAMA utilizando um robô de reabilitação (Lokomat); no segundo foi realizada a avaliação da articulação do joelho de uma pessoa caminhando em uma esteira; no terceiro, o PyJama foi utilizado para processar dados de uma base de dados de acesso aberto; e no quarto, foi realizada a avaliação de marcha de um indivíduo utilizando o JAMA juntamente com um algoritmo de machine learning de acesso aberto para análise dos dados.
+
+\section{Resultados e Discussão}
+
+Experimento 1: O JAMA foi capaz de extrair os dados de movimento e o PyJama conseguiu estimar o ângulo corretamente com a fusão dos dados de maneira bem próxima ao Kinvoea, um software gratuito de tratamento de vídeos para análise de movimento. Estes resultados apresentaram consistência com o que era esperado do experimento. 
+
+Experimento 2: No teste em uma situação de avaliação real da marcha humana, Apesar de as amplitudes terem variado um pouco, foi possível observar que os dados apresentaram um comportamento próximo ao esperado. Uma hipótese para estas variações é que elas seriam causadas pelo posicionamento dos dispositivos JAMA, mas mesmo sem o posicionamento ideal, o JAMA e o PyJama foram eficazes em suas funções. 
+
+Experimento 3: Para realizar o teste sobre as estimativas realizadas pelos algoritmos implementados na PyJama, foram analisados os dados de dispositivos padrão-ouro e utilizadas as estimativas destes dispositivos como referência. Os dados utilizados foram extraídos do dataset de acesso aberto Total Capture12. Para este teste o PyJama realizou uma transformação da orientação em quatérnion para ângulos de Euler e depois retornando para quatérnions, isso demonstrou que as funções de transformação não possuem erros de implementação e que consegue estimar a orientação corretamente ponto a ponto no tempo. De maneira geral, os resultados reforçam a superioridade das estimativas feitas em quatérnion. 
+
+Experimento 4: Este visou avaliar a compatibilidade dos dados do JAMA com um software de acesso aberto para avaliação de marcha, o GaitPy (v1.6.0). De maneira geral a integração do sistema proposto com o GaitPy foi realizada de forma fluida com bons resultados. A utilização do JAMA em conjunto com o GaitPy cumpriu todos os requerimentos e foi de fácil implementação, e Isso foi bastante importante para demonstrar a independência entre JAMA e PyJama. 
+
+\section{Conclusão}
+É factível o desenvolvimento e uso do sistema proposto, seja de forma integral ou parcial, pois tanto o JAMA quanto a PyJama se apresentaram aptos a cumprir os objetivos propostos. Estes recursos continuarão em desenvolvimento, visando aperfeiçoar o que já foi implementado e adição de novos recursos. 
+
+
+\end{document}
+
