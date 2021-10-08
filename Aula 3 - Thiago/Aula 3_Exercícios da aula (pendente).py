@@ -3,6 +3,7 @@
 #ser verdadeiro ou falso.
 #Somente mostrar true e false (sem estrutura de decisão)
 
+
 Peso = float(input("digite seu peso\n")) #float: é usada para informar ao programa que está é uma variável do tipo real; input: é usada para inserir dados.
 Altura = float(input("digite sua altura\n")) #float: é usada para informar ao programa que está é uma variável do tipo real; input: é usada para inserir dados.
 IMC = Peso/pow(Altura,2) #pow é utilizada para retornar o valor elevado ao expoente.

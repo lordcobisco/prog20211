@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Vorlage für Seminararbeiten im Institut für Verteilte Systeme
+% 
+% HINWEISE
+% 
+%  1. Bei Nutzung für Seminarausarbeitungen darf insbesondere die Schriftart
+%     und -größe nicht angepasst werden.
+%  2. Die Vorlage unterstützt deutsche und englische Ausarbeitungen durch
+%     Anpassung der babel Paketoptionen.
+%  3. Folgende Angaben sollen angepasst werden:
+%     - Titel der Arbeit
+%     - Name und E-Mail-Adresse des Autors
+%     - Titel des Seminars
+%     - Semester
+%  4. Die Vorlage sieht eine Lizensierung unter CC-BY-SA vor, die jedoch
+%     nicht verpflichtend ist. Falls nicht gewünscht, bitte alle \thanks
+%     Befehle auskommentieren.
+%     Die gewählte Lizenz (CC-BY-SA) ist kompatibel mit einer möglichen
+%     Veröffentlichung auf dem Volltextserver der Uni Ulm
+%     (http://vts.uni-ulm.de).
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Based on the IEEE Journal style.
+\documentclass[10pt,a4paper,compsoc]{IEEEtran}
+
+\usepackage{graphicx}
+\usepackage[cmex10]{amsmath}
+\usepackage[ngerman]{babel} % Deutsche Ausarbeitung
+% \usepackage[USenglish]{babel} % Englische Ausarbeitung
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+
+\newcommand\IEEEfirstsection[1]{%
+  \noindent\raisebox{2\baselineskip}[0pt][0pt]%
+  {\parbox{\columnwidth}{#1%
+  \global\everypar=\everypar}}%
+  \vspace{-1\baselineskip}\vspace{-\parskip}\par
+}
+
+\newcommand\cclicense{{\normalfont\sffamily\bfseries CC-BY-SA}}
+\IfFileExists{ccicons.sty}{%
+\usepackage{ccicons}
+\renewcommand\cclicense{\ccbysa}
+}
+
+\begin{document}
+
+\title{Resumo sobre o Artigo: “Evaluating the Performance of Balance Physiotherapy Exercises Using a Sensory Platform: The Basis for a Persuasive Balance Rehabilitation Virtual Coaching System"}
+
+\author{%
+\IEEEauthorblockN{Disciplina: Fundamentos de Programação e Desenvolvimento de Projetos Aplicados à Neuroengenharia}\\
+\IEEEauthorblockN{Aluno: Thiago Araújo}\\
+\IEEEauthorblockA{\url{Thiago.araujo@edu.isd.org.br}}%
+%
+\iflanguage{ngerman}{%
+\thanks{%
+\cclicense{}
+Diese Arbeit steht unter einer
+Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen
+3.0 Deutschland Lizenz.}%
+\thanks{\url{http://creativecommons.org/licenses/by-sa/3.0/de/}}%
+}{ % Englische Ausarbeitung
+\thanks{%
+\cclicense{}
+This work is licensed under a
+Creative Commons Attribution-ShareAlike 4.0 International License.}%
+\thanks{\url{http://creativecommons.org/licenses/by-sa/4.0/}}%
+}%
+}
+\IEEEpubid{\sffamily%
+\makebox[\columnwidth]{\hfill Titel des Seminars}%
+\makebox[\columnsep]{$\cdot$}%
+\makebox[\columnwidth]{WS/SS XXXX,
+Institut f"ur Verteilte Systeme, Universit"at Ulm\hfill}}
+
+% make the title area
+\maketitle
+\IEEEfirstsection{%
+\section{Introdução}
+\label{sec:introduction}
+}
+
+Os programas de reabilitação desempenham um papel importante na melhoria da qualidade de vida de pacientes com distúrbios do equilíbrio. Esses programas geralmente são executados em ambiente doméstico, por falta de recursos. Esse procedimento costuma resultar em exercícios mal realizados ou até mesmo abandono total dos programas, pois os pacientes carecem de orientação e motivação. 
+
+Este artigo apresenta um novo sistema para gerenciar distúrbios de equilíbrio em um ambiente doméstico usando um treinador virtual para orientação, instrução e incentivo~\cite{test}.
+
+Em termos de novidade, a abordagem proposta, ao mesmo tempo que adota as melhores práticas propostas pela literatura, dá um passo adiante, pois cria uma interação acessível e fechada entre o treinador virtual e o paciente durante a execução do programa de fisioterapia. A interação inclui a captação e avaliação dos exercícios realizados e a notificação do paciente com mensagens adequadas a fim de corrigir e melhorar o desempenho do exercício. Embora a avaliação do exercício seja realizada em tempo real, a experiência do usuário se assemelha à vivida por um fisioterapeuta real. Para atingir esse nível de experiência do usuário, novos algoritmos de captura de movimento foram projetados e desenvolvidos.
+
+\section{Métodos}
+
+
+O sistema proposto é composto por dispositivos sensores, tecnologia de realidade aumentada e agentes de inferência inteligente, que captam, reconhecem e avaliam o desempenho do paciente durante a execução dos exercícios. Mais especificamente, este trabalho apresenta um módulo de captura e avaliação de movimento baseado em casa, que utiliza uma plataforma sensorial para reconhecer um exercício realizado por um paciente e avaliá-lo. A plataforma sensorial compreende sensores IMU (Mbientlab MMR© 9axis), palmilhas de pressão (Moticon © ) e uma câmera RGB de profundidade (Intel D415 © ). Este módulo é projetado para entregar mensagens tanto durante a execução do exercício, entregando notificações e alertas personalizados ao paciente, quanto após o término do exercício, pontuando o desempenho geral do paciente. Foi implantado um conjunto de estudos de validação de prova de conceito, com o objetivo de avaliar a precisão dos diferentes componentes para os submódulos do módulo de captura e avaliação de movimento.
+
+Métodos completos
+Com base nos protocolos de fisioterapia atuais, um conjunto de exercícios foi proposto por médicos especializados. Cada um dos exercícios propostos, os quais são descritos detalhadamente em ( 28 ) e em ( 29), visa melhorar uma deficiência específica relacionada a distúrbios de equilíbrio, como estabilidade do olhar, tontura, natação, marcha e alinhamento postural. A partir dos exercícios de equilíbrio mencionados anteriormente, foi identificado um conjunto de movimentos corporais. Nomeadamente, a fim de cumprir os requisitos derivados dos exercícios propostos pelos fisioterapeutas, tivemos que capturar e avaliar: (1) movimentos da cabeça no plano de guinada, inclinação e rotação, (2) marcha, (3) oscilação do tronco em pé e durante a caminhada, (4) movimento de subida de colina, (5) giros do corpo de 180 °, e (6) curvatura em pé e sentado. Paralelamente a esses movimentos, a postura do corpo também deve ser avaliada.
+
+Com o objetivo de projetar e desenvolver um serviço de coaching virtual em loop fechado em grande escala, é proposta uma plataforma de Internet das Coisas. A Figura 2 apresenta a interação em malha fechada entre o paciente e o coach virtual por meio da captura de movimento e dos módulos de pontuação, que coletam e avaliam os dados coletados da plataforma de detecção. Nas subseções a seguir, cada um dos módulos básicos é descrito em detalhes.
+
+2.1. Plataforma de Detecção
+A plataforma de detecção descrita na seção a seguir considerou o movimento da cabeça, a postura, a oscilação postural e os parâmetros da marcha como os principais fatores avaliados pelo fisioterapeuta, fornecendo programas individualizados para identificar os exercícios apropriados e suas progressões.
+
+Com base nos movimentos corporais mencionados acima, um conjunto de dispositivos de detecção foi selecionado. Considerando a usabilidade do sistema proposto, o conjunto mínimo de dispositivos foi selecionado. Assim, a plataforma de detecção compreende duas IMUs 9-DoF, um par de palmilhas de pressão, também equipadas com acelerômetro e giroscópio, e uma câmera de profundidade.
+
+Em relação ao posicionamento dos sensores, um IMU foi colocado na testa do paciente (preso com uma tira de Velcro © ), um foi colocado na cintura do paciente e, claro, as palmilhas de pressão nos sapatos do paciente. A câmera de profundidade foi posicionada a 1,85 m de distância do paciente, devido à especificação do seu campo de visão.
+
+2.2. Módulo de captura de movimento
+O módulo de captura de movimento é responsável por coletar os dados produzidos pela plataforma de sensoriamento, processá-los e produzir informações quantitativas por meio de análises relevantes sobre a execução de um determinado exercício.
+
+Um conjunto de algoritmos foi desenvolvido e implementado com o objetivo de calcular as métricas das quais as análises de fisioterapia descritas na seção 2 são derivadas. A Tabela 1 lista as métricas calculadas pelo sistema proposto.
+
+Deixar uma{ p }d( t ), g{ p }d( t ), e m{ p }d( t )ser os dados de aceleração, giroscópio e magnetômetro produzidos pelos sensores IMU, onde d = { x, y, z } a direção do componente ep = { cabeça, cintura } o posicionamento do sensor. Além disso, deixep{ f}eu( t )ser os dados de pressão produzidos pelas palmilhas de pressão, onde i ∈ [1, n ], n é o número de sensores de pressão embutidos na palmilha de pressão ef = { esquerda, direita } denotando o pé relevante. DeixarUMA{ f}d( t ), G{ f}d( t )ser os dados de aceleração e giroscópio produzidos pelas palmilhas de pressão. Finalmente, seja F j ( t ) os dados produzidos pela câmera de profundidade, onde j = { RGB, profundidade }.
+
+2.2.1. Ângulos de Euler
+Os dados do acelerômetro, giroscópio e magnetômetro são usados ​​para calcular o vetor de apontamento da cabeça e da cintura. Para isso, utiliza-se o conhecido filtro de Kalman, conforme proposto por ( 30 ). Assim, os dadosuma{ p }d( t ), g{ p }d( t ), e m{ p }d( t )são traduzidos para ângulos de Euler nos planos de yaw ( yaw { p } ( t )), pitch ( pitch { p } ( t )) e roll ( roll { p } ( t )). Os ângulos de Euler são usados ​​como entrada para o cálculo de um amplo conjunto de métricas, conforme descrito nas seções a seguir.
+
+2.2.2. Movimento da Cabeça
+O movimento da cabeça é um termo que inclui velocidade; amplitude de movimento em planos de guinada, inclinação e rotação; e número de repetições de um determinado padrão. Para calcular essas métricas, o Algoritmo 1 foi empregado.
+
+O algoritmo 1 coleta dados dos dispositivos de detecção a cada intervalo de tempo em milissegundos. Para este lote, aplica-se a função de eliminação de “círculo completo”, que visa corrigir a descontinuidade que aparece nos dados dos ângulos de Euler ao ultrapassar 360 °. Depois disso, um filtro passa-baixa de segunda ordem é aplicado, com f c = 50 Hz e os extremos locais da série de dados são calculados. Em seguida, uma função de pareamento de distância mínima é aplicada para estimar os pares mín – máx dos dados. Finalmente, para cada par mín-máx, as métricas relativas (velocidade, faixa) são calculadas.
+
+É importante ressaltar que o método proposto funciona substancialmente bem além do conhecido problema de deriva dos dados IMU devido ao fato de que, como estima as métricas apenas a partir dos mínimos e máximos adjacentes, esperamos um desvio bastante pequeno dentro deste intervalo de tempo. . Assim, como a métrica final segue uma função diferencial, o desvio é eliminado.
+
+2.2.3. Postura
+Embora a postura não esteja diretamente relacionada a um movimento específico do exercício, os pacientes devem ficar em pé, sentar ou caminhar com o corpo ereto. Para isso, é proposto um algoritmo para estimar a postura do paciente. O algoritmo 2 utiliza os dados da câmera de profundidade, bem como os dados do sensor principal IMU.
+
+O algoritmo 2 coleta dados dos dispositivos de detecção a cada intervalo de tempo em milissegundos. Em seguida, ele estima (usando o Algoritmo 1) os valores máximos locais da posição da cabeça no plano do pitch. Isso porque precisamos estimar o tempo mais adequado para avaliar a postura, e é quando a cabeça está na posição mais vertical. Quando esses pontos de tempo são calculados, o quadro mais próximo (RGB e profundidade) para cada ponto de tempo é detectado. Em seguida, é aplicada uma função de remoção de fundo, com base nos dados de profundidade e, por fim, é aplicado um modelo de marca corporal ( 31 ), que estima a posição da cabeça e a posição da cintura. Usando esses dois pontos, a postura corporal é estimada para cada ponto de tempo.
+
+2.2.4. Balanço do tronco
+Os dados produzidos pelo sensor IMU posicionado na cintura do paciente foram utilizados para avaliar a estabilidade nos exercícios em pé e caminhada. Depois de revisar todos os índices de quantificação propostos em ( 32 ), as velocidades angulares de pitch-roll de 95% da área foram selecionadas. Mais particularmente, sejam pv ( t ) e pr ( t ) as velocidades angulares ( graus / s ) no passo e no plano de rolamento, respectivamente. Usando esses dados, criamos o gráfico G = {| pv ( t ) |, | pr ( t ) |}, que representa a relação entre a velocidade do passo e a velocidade de rotação.
+
+Com base no gráfico G , o índice de quantificação é igual ao raio do quadrante necessário para incluir 95% dos pontos da figura. É claro que quanto maior o índice, mais instável o paciente estava durante o exercício em pé / caminhada. Mais especificamente para as atividades de caminhada, é importante ressaltar que o gráfico G inclui apenas os dados que correspondem ao caminhar para a frente e para trás, omitindo os dados que correspondem às voltas do corpo. A Figura 3 apresenta uma amostra do gráfico G para marcha normal e marcha instável.
+
+2.2.5. Parâmetros de marcha
+Os parâmetros da marcha, conforme descritos na Tabela 1 , são usados ​​para avaliar o padrão de marcha do paciente de forma quantitativa. No contexto do sistema de coaching proposto, a marcha será realizada em ambiente domiciliar. Assim, na maioria dos casos, um exercício que se refere a uma atividade de caminhada incluirá muitas rotas de ida e volta devido a limitações de espaço. Como os parâmetros da marcha são relatados apenas para os passos em escala real, o algoritmo para calcular os parâmetros de marcha deve inicialmente isolar os passos em escala real e rejeitar as voltas e meios-passos do corpo.
+
+A lógica do Algoritmo 3 baseia-se na utilização dos dados IMU produzidos a partir das palmilhas de pressão para selecionar as etapas de extração dos parâmetros da marcha. Mais especificamente, a rotação absoluta dos pés é calculada integrando os dados do giroscópio G ( graus / s ). Combinando esses dados com os dados derivados da função acelerômetro ( A ( m / s 2 )), omitTurns & Stops () detecta os intervalos de tempo dentro dos quais o paciente executou as etapas em escala total. Então, os dados de pressão das palmilhas (p{ f}eu( t )) são recuperados para os mesmos intervalos de tempo e os eventos de marcha (subida da colina, dedo levantado e pé plano) para cada pé são calculados. Esses eventos de marcha eventualmente são usados ​​para o cálculo das métricas descritas na Tabela 1 .
+
+2.3. Configurações de validação de métricas e análises
+As métricas e as análises calculadas na seção anterior exigiram o desenvolvimento de vários algoritmos e metodologias. Essas abordagens precisam ser validadas para assegurar que os resultados produzidos são precisos o suficiente para produzir uma interação significativa com o paciente. Para isso, diversos estudos de validação em laboratório foram realizados.
+
+2.3.1. Validação de ângulos de Euler
+Como os ângulos de Euler constituem uma das métricas mais importantes do sistema de captura de movimento, um estudo de validação de duas fases foi realizado. Para a primeira fase, foi construída uma configuração experimental, conforme apresentado na Figura 4A . A configuração inclui uma área calibrada com um círculo unitário desenhado, que é dividido em setores de 15 °. Além disso, um dispositivo 9-DoF IMU é preso com uma corda, cuja ponta solta é fixada no centro de um círculo. Realizamos 50 experimentos. Para cada experimento, um ângulo específico (ϕ) foi selecionado e movemos o sensor ϕ graus no sentido horário e anti-horário 15 vezes com velocidades aleatórias.
+
+Para a segunda fase, é utilizado um apontador laser acoplado a um dispositivo de exibição tipo head-mounted display (que é usado para projetar o coach virtual). Um sujeito foi colocado em uma posição sentada contra uma parede, que tinha alvos ( Figura 4B ) colocados em pontos específicos. Sujeito instruído a realizar movimentos repetitivos da cabeça, tentando “atingir” alvos específicos, seja na guinada ou no plano de arremesso. Os alvos eram constantemente capturados usando uma câmera de vídeo de alta taxa de quadros. O fluxo de vídeo foi usado para recuperar as métricas reais de movimento da cabeça (faixa de ângulo e velocidade) para cada movimento.
+
+2.3.2. Validação de estimativa de postura
+A postura é crucial para a execução correta dos exercícios em pé e de caminhada. Principalmente nos casos em que o paciente é solicitado a realizar movimentos de flexão, é importante retornar à posição vertical. Para isso, cinco sujeitos utilizaram o módulo de captura de movimento. Os indivíduos foram instruídos a se curvar e retornar à posição vertical. Cinco repetições foram executadas sentado e cinco repetições em pé.
+
+Usando os streams de vídeo gravados pela câmera de profundidade (RGB stream), um observador indicou se cinco sujeitos voltaram à posição vertical enquanto realizavam exercícios de flexão. Suas seleções foram comparadas com a saída do Algoritmo 2.
+
+2.3.3. Validação de parâmetros de marcha
+Os parâmetros de marcha exigiam uma configuração de validação separada. Para isso, dois sistemas comerciais equipados com software proprietário de análise de dados foram comparados com a saída do Algoritmo 3. Por exemplo, a plataforma de pressão WinTrack © e o sistema RehaGait Pro © IMU foram utilizados.
+
+Para validar o centro de pressão (CoP), três sujeitos usaram o sistema de captura de movimento e o WinTrack © em paralelo enquanto realizavam uma atividade de caminhada de oito passos em velocidade normal. Calculamos os dados de CoP em comparação com os dados relativos fornecidos pelo software WinTrack © .
+
+De forma semelhante, três indivíduos usaram RehaGait © e WinTrack © para validar (i) tempo de suporte duplo, (ii) tempo de suporte único, (iii) duração do passo, (iv) duração da passada e (v) cadência. Mais especificamente, cinco sujeitos usaram simultaneamente o sistema RehaGait © e o sistema de captura de movimento enquanto executavam cinco passadas em linha reta. Em seguida, cinco sujeitos usaram o sistema WinTrack © e o sistema de captura de movimento enquanto executavam oito etapas em linha reta.
+
+Em ambas as configurações citadas ( Figura 5 ), a aquisição dos dados foi realizada simultaneamente nos dois sistemas e os parâmetros temporais e de pressão da marcha foram extraídos e comparados.
+
+2.4. Estudos de Validação
+Com o objetivo de validar o framework proposto descrito na seção 2.2, um conjunto de estudos de validação de pequena escala foi realizado. Foram realizados cinco estudos de validação em laboratório: dois para o cálculo dos ângulos de Euler, um para a estimativa da postura e dois para os parâmetros da marcha. A Tabela 2 apresenta os dados demográficos [idade, altura e peso são expressos por meio do valor da mediana e do intervalo interquartil ( IQR )] para os sujeitos participantes dos estudos de validação, exceto, é claro, a configuração da validação de Euler 2D, onde um único operador realizou o experimentar. É mencionado que os participantes em todos os estudos de validação eram diferentes. Os participantes foram indivíduos com distúrbios do equilíbrio por disfunção vestibular crônica unilateral.
+
+Todos foram informados sobre o contexto de cada estudo e se ofereceram para participar, após consentimento por escrito quanto à vontade de usar o sistema e de ter seus dados registrados e utilizados para fins de pesquisa. Os estudos de validação decorreram sob a supervisão da Unidade de Tecnologia Médica e Sistemas Inteligentes de Informação. No total, 23 pacientes participaram dos estudos de validação.
+
+2,5. Módulo de Avaliação de Exercícios
+O tempo de resposta do módulo é crucial para a funcionalidade geral do sistema porque está diretamente relacionado ao tempo de resposta do coach virtual quando uma intervenção é necessária. Quando, por exemplo, um paciente executa um exercício incorretamente, precisamos do módulo para capturar o movimento em tempo real e iniciar um ciclo de comunicação com o paciente. Por outro lado, a maioria das metodologias de processamento de sinal depende de todo o fluxo de dados para realizar o processamento, como integração e filtragem. Além disso, a precisão das métricas calculadas é maior quando uma sequência de dados completa está disponível, em comparação com a precisão dos mesmos algoritmos ao processar parte dos dados.
+
+A fim de resolver esta discrepância entre os requisitos da experiência do usuário e do ponto de vista das metodologias de processamento de sinal, uma nova abordagem de curto e longo prazo para avaliar os exercícios é proposta. De acordo com essa abordagem, o módulo de avaliação compreende duas funções, conforme ilustrado na Figura 6 . O objetivo da função de avaliação online é usado para avaliar o exercício realizado em dois aspectos, segurança e correçãode execução. Em primeiro lugar, a saída da função online são mensagens / alertas (fornecidos pelo treinador virtual) que aconselham o paciente a interromper a execução do exercício se uma regra de segurança for violada. Por exemplo, se o sistema detectar um alto valor de oscilação durante um exercício de caminhada, ele produzirá uma mensagem para notificar o usuário de que deve parar o exercício. Em segundo lugar, a função online produz mensagens / conselhos, que informam o paciente sobre a forma como ele realiza um exercício e corrigem os movimentos relativos. Assim, se o sistema detectar um movimento da cabeça no plano de inclinação enquanto o paciente foi instruído a realizar movimentos no plano de guinada, a função online produzirá um conselho e notificará o usuário para corrigir o movimento.
+
+A função online usa apenas uma parte dos dados de detecção coletados em janelas de tempo de intervalo de tempo específicas e tem a capacidade de produzir respostas quase em tempo real. As regras tanto para os alertas de segurança quanto para as advertências corretivas foram estruturadas com base em um procedimento de duas fases. Durante a primeira fase, três fisioterapeutas especializados em distúrbios do equilíbrio documentaram um conjunto de regras com base em sua experiência. Em seguida, na segunda fase, as regras coletadas foram unificadas e apresentadas aos especialistas, onde as regras foram classificadas em duas categorias. A primeira categoria incluiu regras independentes do paciente, e a segunda categoria incluiu regras que dependem do desempenho da linha de base do paciente. A segunda categoria é crucial para personalizar a interação entre o sistema e o paciente.
+
+Quando um exercício é concluído (geralmente após um certo tempo ou um certo número de repetições), todo o conjunto de dados coletado é entregue à função de avaliação offline . O objetivo da função offline é produzir uma pontuação motora para o exercício realizado. Este escore será utilizado para a avaliação clínica do paciente e auxiliará o médico no planejamento da intervenção e, ao mesmo tempo, notificará o paciente sobre o progresso alcançado. A função offline processa todo o conjunto de dados e recalcula as métricas e análises de movimento. Com base nessas análises, um modelo linear é aplicado para quantificar o desempenho de todo o exercício.
+
+Mais especificamente, as métricas e análises discutidas na seção 2.2 são calculadas para cada repetição de um exercício. Deixarmteuser o valor calculado para o t analítico na repetição i . Então, a pontuação motora para o t analítico é:
+
+Mt=1N∑1Nmteu,    ( 1 )
+onde N é o número de repetições capturadas. Finalmente, a pontuação motora é calculada como:
+
+onde k é o número de análises de avaliação necessárias para avaliar um exercício específico,Mbjeué o desempenho da linha de base do paciente no j analítico, e T j é o valor-alvo do j analítico, que o paciente está tentando alcançar. Todos os valores são normalizados.
+
+Com o objetivo de verificar o raciocínio acima referido, foi realizado um estudo pré-piloto com cinco sujeitos. Esses sujeitos, após passarem duas sessões de uso do sistema para fins de familiarização, executaram quatro exercícios de fisioterapia de equilíbrio. A duração de cada exercício foi de 60 s. Esse processo resultou em um conjunto de 20 exercícios. Todos os exercícios foram gravados em vídeo. Um fisioterapeuta revisou o conjunto de exercícios e classificou os alertas e mensagens produzidos em três classes. Ou seja, a classe A incluía mensagens que estão corretas e ele também as transmitia ao paciente, a classe B incluía mensagens que estão corretas, mas ele não as transmitia ao paciente e a classe Cincluiu mensagens que não são consideradas corretas. Apenas mensagens com interesse clínico foram consideradas (por exemplo, uma mensagem de bom dia seria excluída do processo). Por fim, o fisioterapeuta anotou a quantidade de mensagens ( classe D ) que ele daria ao paciente e não entregaria pelo Coach Virtual.
+
+3. Detalhes de implementação do sistema
+Com base nos movimentos corporais descritos na seção anterior, um conjunto de sensores foi selecionado. Os critérios para selecionar os dispositivos de detecção incluíram (1) acesso aos dados produzidos pelo sensor por meio da Interface de Programação de Aplicativos de código aberto, (2) capacidade de streaming e (3) frequência de amostragem. Após levantamento do mercado, os dispositivos descritos na Tabela 3 foram selecionados. A Tabela 3 também inclui as características técnicas mais importantes de cada sensor, enquanto a Figura 7 demonstra o posicionamento e uma ilustração de cada sensor.
+
+Em relação à aquisição de dados, um aspecto importante é a sincronização de dados entre os diferentes dispositivos de detecção. Este aspecto é ainda mais importante considerando o fato de que devido ao protocolo de comunicação dos dois dispositivos wireless (IMU e palmilhas de pressão), que utilizam a pilha Bluetooth Low Energy (BLE © ), foi detectada perda de dados, reduzindo a frequência de amostragem em 1,0–1,3%. Para isso, um relógio global hospedado em um nó orquestrador anota os dados de recebimento e interpola os dados perdidos usando uma função de interpolação cúbica. Este procedimento garante que o módulo de análise de movimento receberá o número correto de amostras de dados para processamento, o que é crucial para a robustez dos algoritmos propostos.
+
+Os módulos foram desenvolvidos em Python © 3.6, na biblioteca Multiprocessing. As funções de processamento de imagens foram desenvolvidas usando a biblioteca OpenCV © . O Virtual Coach foi desenvolvido usando a estrutura Unity © e apresentado ao usuário final por meio do fone de ouvido de realidade aumentada Haori Mirror © . A comunicação entre o módulo de captura de movimento e o Coach Virtual foi contatada através do Orion Message Broker, um atuador FI-WARE.
+
+\section{Resultados e Discussão}
+
+Mais especificamente, o algoritmo de cálculo do ângulo de Euler em 2D ( R 2 = 0,99) e em 3D ( R 2 = 0,82 no plano de guinada e R 2= 0,91 para o plano de passo), bem como a velocidade de giro da cabeça ( R 2 = 0,96), mostraram boa correlação entre os valores calculados e verdadeiros fornecidos pelas anotações dos especialistas. O algoritmo de avaliação da postura resultou em precisão = 0,83, enquanto as métricas de marcha foram validadas contra dois sistemas de análise de marcha bem estabelecidos ( R 2 = 0,78 para suporte duplo, R 2 = 0,71 para suporte único, R 2 = 0,80 para tempo de passo, R 2 = 0,75 para o tempo de passada (WinTrack © ), R 2 = 0,82 para cadência e R 2 = 0,79 para o tempo de passada (RehaGait© ).
+
+\section{Conclusões}
+
+Os resultados da validação forneceram evidências de que o sistema proposto pode capturar e avaliar com precisão um exercício de fisioterapia dentro do contexto de distúrbios de equilíbrio, fornecendo assim uma base robusta para o ecossistema de treinamento virtual e, assim, melhorar o compromisso do paciente com programas de reabilitação, melhorando a qualidade dos exercícios realizados. Em resumo, o coaching virtual pode melhorar a qualidade dos programas de reabilitação domiciliar, desde que seja combinado com módulos de captura e avaliação de movimentos precisos, que fornecem ao coach virtual a capacidade de adaptar a interação com o paciente e oferecer uma experiência personalizada.
+
+\section{Referências}
+
+\end{document}
