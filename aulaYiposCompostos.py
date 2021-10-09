@@ -136,20 +136,44 @@
 
 dicionario = {}
 dicionario = dict()
-# dicionario['biblioteca'] = 'Estantes'
+#dicionario['biblioteca'] = 'Estantes'
+#print(dicionario)
+#print(dicionario['biblioteca'])
+
+dicionario['nordeste'] = {'RN':[[24,240010,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,3,3,0,'','',0],
+                                [24,240010,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,3,3,5,'','',0]],
+                          'PB':[[25,250010,25011,'11ÂªREGIAO','2020-03-27',13,10234,0,0,0,0,'','',0],
+                                [25,250020,25007,'7ÂªREGIAO','2020-03-27',13,5640,0,0,0,0,'','',0]]
+                        }
+
+                        #   'RN':[24,240010,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,3,3,5,'','',0],
+                        #   'RN':[24,240690,24006,'6ÂªREGIAODESAUDE-PAUDOSFERROS','2020-08-01',31,3996,5,0,0,0,'','',0],
+                        #   'RN':[24,240680,24005,'5ÂªREGIAODESAUDE-SANTACRUZ','2020-12-23',52,4759,110,2,2,0,'','',0],
+                        #   'PB':[25,250010,25011,'11ÂªREGIAO','2020-03-27',13,10234,0,0,0,0,'','',0],
+                        #   'PB':[25,250020,25007,'7ÂªREGIAO','2020-03-27',13,5640,0,0,0,0,'','',0]}
+#      
+                            # 'PB':[[0,1,2,3],[0,1,2,3]],
+                            # 'PI':[[0,1,2,3],[0,1,2,3]],}
 # print(dicionario)
 # print(dicionario['biblioteca'])
+# print(dicionario['biblioteca']['estantes'])
 
-dicionario['biblioteca'] = {'estantes':[1,2,3,4,5,6,7,8],'livros':[]}
-print(dicionario)
-print(dicionario['biblioteca'])
-print(dicionario['biblioteca']['estantes'])
-print(dicionario['biblioteca']['estantes'][0])
-print(dicionario.keys())
-print(dicionario['biblioteca'].keys())
+soma=0
+for lista in dicionario['nordeste'].items():
+    print(lista['RN'])
+    
 
-print(dicionario['biblioteca'].items())
-print(len(dicionario['biblioteca']))
-print(dicionario.get('biblioteca',None))
-print(dicionario.get('estantes',None))
+
+
+
+
+#dicionario['nordeste']['RN'][0][1])
+#print(dicionario['nordeste']['RN'])
+# print(dicionario.keys())
+# print(dicionario['biblioteca'].keys())
+
+# print(dicionario['biblioteca'].items())
+# print(len(dicionario['biblioteca']))
+# print(dicionario.get('biblioteca',None))
+# print(dicionario.get('estantes',None))
 # print(dicionario['estantes'])#dá erro
