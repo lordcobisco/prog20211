@@ -2,6 +2,9 @@
 #print(' UF || cidade || coduf || nomeRegiaoSaude || codmun || codRegiaoSaude || data semanaEpi || populacaoTCU2019 || casosAcumulado || casosNovos || obitosAcumulado || obitosNovos || Recuperadosnovos || emAcompanhamentoNovos || interior/metropolitana')
 
 #  Lista regioes de saúde do RN
+from typing import KeysView
+
+
 listRegioesRN = [[24,240010,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,0,3,0,'','',0],
             [24,240680,24005,'5ÂªREGIAODESAUDE-SANTACRUZ','2020-12-23',52,4759,110,2,2,0,'','',0],
             [24,240020,24008,'8ÂªREGIAODESAUDE-ACU','2020-03-27',13,58017,0,0,0,0,'','',0],
@@ -328,68 +331,49 @@ print('===============================================')
 print('O maior número de óbitos é: ',valMax)
 print('O menor número de óbitos é: ',valMin)
 
-#dicRN = dict(listRegioesRN)
+print('================================================')     
+listDictNordeste =[{'RN':[
+                        [{240010:[24,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,3,3,0,'','',0]}],
+                        [{240030:[24,24003,'3ÂªREGIAODESAUDE-JOAOCAMARA','2020-03-27',13,11035,0,0,0,0,'','',0]}],
+                        [{240690:[24,24006,'6ÂªREGIAODESAUDE-PAUDOSFERROS','2020-08-01',31,3996,5,0,0,0,'','',0]}],
+                        [{240680:[24,24005,'5ÂªREGIAODESAUDE-SANTACRUZ','2020-12-23',52,4759,110,2,2,0,'','',0]}]],
+                    'PB':[
+                        [{250010:[25,25011,'11ÂªREGIAO','2020-03-27',13,10234,0,0,0,0,'','',0]}],
+                        [{250020:[25,25007,'7ÂªREGIAO','2020-03-27',13,5640,0,0,0,0,'','',0]}],
+                        [{250030:[25,25003,'3ÂªREGIAO','2020-03-27',13,28496,0,0,0,0,'','',0]}],
+                        [{250050:[25,25002,'2ÂªREGIAO','2020-03-27',13,14489,0,0,0,0,'','',0]}],
+                        [{250053:[25,25015,'15ÂªREGIAO','2020-03-27',13,5492,0,0,0,0,'','',0]}]
+                        ],
+                    'PI':[
+                        [{220480:[22,22009,'VALEDORIOGUARIBAS','2020-10-16',42,9811,181,5,3,0,'','',0]}],
+                        [{220110:[22,22002,'CHAPADADASMANGABEIRAS','2020-10-27',44,11289,48,2,5,0,'','',0]}],
+                        [{220117:[22,22010,'VALEDOSAMBITO','2020-12-05',49,3951,32,0,1,0,'','',0]}],
+                        [{220253:[22,22005,'PLANICIELITORANEA','2020-12-20',52,5868,163,0,4,0,'','',0]}],
+                        [{220160:[22,22004,'ENTRERIOS','2020-09-17',38,10467,247,3,8,0,'','',1]}]
+                        ]
+                        }]
+#Crie um dicionário de forma que seja possível encontrar os municípios associados a um
+#estado específico e extrair os dados de casos novos em apenas um comando.
+dicio ={}
+x=[]
+# print(dicio)
+x = listDictNordeste[0]
+# x['RN'][0]
+for y in x['RN']:
+    for i in y:
+        for k,j in i.items():
+            dicio[k] = j[7]
+    # for i in range(len(y)):
+print("Dados de casos novos extraídos de municípios do RN")
+print(dicio)
+print('================================================')  
 
-#print(dicRN)
+#Extraia os dados de Teresina/PI apresentando os casos novos com um print.
 
-listDictNordeste =[
-                    [{240010:[24,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,3,3,0,'','',0]}],
-                    [{240030:[24,24003,'3ÂªREGIAODESAUDE-JOAOCAMARA','2020-03-27',13,11035,0,0,0,0,'','',0]}],
-                    [{240690:[24,24006,'6ÂªREGIAODESAUDE-PAUDOSFERROS','2020-08-01',31,3996,5,0,0,0,'','',0]}],
-                    [{240680:[24,24005,'5ÂªREGIAODESAUDE-SANTACRUZ','2020-12-23',52,4759,110,2,2,0,'','',0]}],
-                    [{250010:[25,25011,'11ÂªREGIAO','2020-03-27',13,10234,0,0,0,0,'','',0]}],
-                    [{250020:[25,25007,'7ÂªREGIAO','2020-03-27',13,5640,0,0,0,0,'','',0]}],
-                    [{250030:[25,25003,'3ÂªREGIAO','2020-03-27',13,28496,0,0,0,0,'','',0]}],
-                    [{250050:[25,25002,'2ÂªREGIAO','2020-03-27',13,14489,0,0,0,0,'','',0]}],
-                    [{250053:[25,25015,'15ÂªREGIAO','2020-03-27',13,5492,0,0,0,0,'','',0]}],
-                    [{220480:[22,22009,'VALEDORIOGUARIBAS','2020-10-16',42,9811,181,5,3,0,'','',0]}],
-                    [{220110:[22,22002,'CHAPADADASMANGABEIRAS','2020-10-27',44,11289,48,2,5,0,'','',0]}],
-                    [{220117:[22,22010,'VALEDOSAMBITO','2020-12-05',49,3951,32,0,1,0,'','',0]}],
-                    [{220253:[22,22005,'PLANICIELITORANEA','2020-12-20',52,5868,163,0,4,0,'','',0]}],
-                    [{220160:[22,22004,'ENTRERIOS','2020-09-17',38,10467,247,3,8,0,'','',1]}]
-                ]       
-#         
-#        
-#         ,
-#         ,
-#            
-
-# dictBR['Nordeste'] = {'RN':[[24,240010,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,0,3,0,'','',0],
-#                             [24,240020,24008,'8ÂªREGIAODESAUDE-ACU','2020-03-27',13,58017,0,0,0,0,'','',0],
-#                             [24,240030,24003,'3ÂªREGIAODESAUDE-JOAOCAMARA','2020-03-27',13,11035,0,0,0,0,'','',0],
-#                             [24,240690,24006,'6ÂªREGIAODESAUDE-PAUDOSFERROS','2020-08-01',31,3996,5,0,0,0,'','',0],
-#                             [24,240680,24005,'5ÂªREGIAODESAUDE-SANTACRUZ','2020-12-23',52,4759,110,2,2,0,'','',0]],
-#                       'PB':[23,230020,23012,'12ÂªREGIAOACARAU','2020-04-11',15,62641,0,0,0,0,'','',0]}
-# listDictBR=[]
-# listDictBR[0]=listDictRN
-# listDictBR[1]=listDictPB
-
-# O dado código do município inícia pelo o código da UF
-acm=0
-list=[]
+print('Dados extraídos de casos novos de municípios do estado PI')
 for es in listDictNordeste:
-    for inf in es:
-        ch = str(inf.keys())
-        list = inf.values
-        print(list)
-        #print(ch)
-        #print(ch[0:1])
-        cht = ch[11:13]
-        if cht == '24':
-            print('deu certo encontrar o 24')
-            # for x in inf.values():
-            #     acm=acm+x[7]
-print('================================================')
-print('valores acumulados para casos novos extraído do: ',acm)        
-                    
-# dicRN={"coduf":24,"codmun":240010,"codRegiaoSaude":24004,"nomeRegiaoSaude":'4ÂªREGIAODESAUDE-CAICO',
-#        "data":'2020-08-03',"semanaEpi":32,"populacaoTCU2019":11136,"casosAcumulado":46,
-#        "casosNovos":0,"obitosAcumulado":3,"obitosNovos":0,"Recuperadosnovos":'',"emAcompanhamentoNovos":'',
-#        "interior/metropolitana":0}
-#        "coduf":24,"codmun":240680,"codRegiaoSaude":24005,"nomeRegiaoSaude":'5ÂªREGIAODESAUDE-SANTACRUZ',
-#     #                 "data":'2020-12-23',"semanaEpi":52,"populacaoTCU2019":4759,"casosAcumulado":110,"casosNovos":2,"obitosAcumulado":2,"obitosNovos":0,
-#     #                 "Recuperadosnovos":'',"emAcompanhamentoNovos":'',"interior/metropolitana":0}
-
-
-#listTest = ce[0]
-#print(listTest[0])
+    for x in es['PI']:
+        for dic in x:
+            for k,y in dic.items():
+                print('Código Município: %d -- Casos Acumulados: %d'%(k,y[7]))
+print('================================================')   
