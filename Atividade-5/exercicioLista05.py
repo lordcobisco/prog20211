@@ -301,11 +301,13 @@ for rg in listBR:
 
 tamanhoListaBR=0
 qntIndexListaUF=0
+
 for rg in listBR:
     for uf in rg:        
         for dados in uf:
             tamanhoListaBR=tamanhoListaBR + 1
             qntIndexListaUF = len(dados)
+            
 print('============================================================\n')
 print('A lista /listBR/ contém %d elementos, são listas que refere-se as regiões Brasil'%len(listBR))
 print('/listBR/listNordeste, em listNordete contém %d elementos, são listas que refere-se aos estados.'%len(listNordeste))
@@ -332,48 +334,54 @@ print('O maior número de óbitos é: ',valMax)
 print('O menor número de óbitos é: ',valMin)
 
 print('================================================')     
-listDictNordeste =[{'RN':[
-                        [{240010:[24,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,3,3,0,'','',0]}],
-                        [{240030:[24,24003,'3ÂªREGIAODESAUDE-JOAOCAMARA','2020-03-27',13,11035,0,0,0,0,'','',0]}],
-                        [{240690:[24,24006,'6ÂªREGIAODESAUDE-PAUDOSFERROS','2020-08-01',31,3996,5,0,0,0,'','',0]}],
-                        [{240680:[24,24005,'5ÂªREGIAODESAUDE-SANTACRUZ','2020-12-23',52,4759,110,2,2,0,'','',0]}]],
+listDictNordeste ={'RN':[
+                        {240010:[24,24004,'4ÂªREGIAODESAUDE-CAICO','2020-08-03',32,11136,46,3,3,0,'','',0]},
+                        {240030:[24,24003,'3ÂªREGIAODESAUDE-JOAOCAMARA','2020-03-27',13,11035,0,0,0,0,'','',0]},
+                        {240690:[24,24006,'6ÂªREGIAODESAUDE-PAUDOSFERROS','2020-08-01',31,3996,5,0,0,0,'','',0]},
+                        {240680:[24,24005,'5ÂªREGIAODESAUDE-SANTACRUZ','2020-12-23',52,4759,110,2,2,0,'','',0]}
+                        ],
                     'PB':[
-                        [{250010:[25,25011,'11ÂªREGIAO','2020-03-27',13,10234,0,0,0,0,'','',0]}],
-                        [{250020:[25,25007,'7ÂªREGIAO','2020-03-27',13,5640,0,0,0,0,'','',0]}],
-                        [{250030:[25,25003,'3ÂªREGIAO','2020-03-27',13,28496,0,0,0,0,'','',0]}],
-                        [{250050:[25,25002,'2ÂªREGIAO','2020-03-27',13,14489,0,0,0,0,'','',0]}],
-                        [{250053:[25,25015,'15ÂªREGIAO','2020-03-27',13,5492,0,0,0,0,'','',0]}]
+                        {250010:[25,25011,'11ÂªREGIAO','2020-03-27',13,10234,0,0,0,0,'','',0]},
+                        {250020:[25,25007,'7ÂªREGIAO','2020-03-27',13,5640,0,0,0,0,'','',0]},
+                        {250030:[25,25003,'3ÂªREGIAO','2020-03-27',13,28496,0,0,0,0,'','',0]},
+                        {250050:[25,25002,'2ÂªREGIAO','2020-03-27',13,14489,0,0,0,0,'','',0]},
+                        {250053:[25,25015,'15ÂªREGIAO','2020-03-27',13,5492,0,0,0,0,'','',0]}
                         ],
                     'PI':[
-                        [{220480:[22,22009,'VALEDORIOGUARIBAS','2020-10-16',42,9811,181,5,3,0,'','',0]}],
-                        [{220110:[22,22002,'CHAPADADASMANGABEIRAS','2020-10-27',44,11289,48,2,5,0,'','',0]}],
-                        [{220117:[22,22010,'VALEDOSAMBITO','2020-12-05',49,3951,32,0,1,0,'','',0]}],
-                        [{220253:[22,22005,'PLANICIELITORANEA','2020-12-20',52,5868,163,0,4,0,'','',0]}],
-                        [{220160:[22,22004,'ENTRERIOS','2020-09-17',38,10467,247,3,8,0,'','',1]}]
+                        {220480:[22,22009,'VALEDORIOGUARIBAS','2020-10-16',42,9811,181,5,3,0,'','',0]},
+                        {220110:[22,22002,'CHAPADADASMANGABEIRAS','2020-10-27',44,11289,48,2,5,0,'','',0]},
+                        {220117:[22,22010,'VALEDOSAMBITO','2020-12-05',49,3951,32,0,1,0,'','',0]},
+                        {220253:[22,22005,'PLANICIELITORANEA','2020-12-20',52,5868,163,0,4,0,'','',0]},
+                        {220160:[22,22004,'ENTRERIOS','2020-09-17',38,10467,247,3,8,0,'','',1]}
                         ]
-                        }]
+                        }
 #Crie um dicionário de forma que seja possível encontrar os municípios associados a um
 #estado específico e extrair os dados de casos novos em apenas um comando.
-dicio ={}
-x=[]
-# print(dicio)
-x = listDictNordeste[0]
-# x['RN'][0]
-for y in x['RN']:
-    for i in y:
-        for k,j in i.items():
-            dicio[k] = j[7]
-    # for i in range(len(y)):
 print("Dados de casos novos extraídos de municípios do RN")
-print(dicio)
-print('================================================')  
+print(listDictNordeste['RN'][0][240010][7])
+print(listDictNordeste['RN'][1][240030][7])
+print(listDictNordeste['RN'][2][240690][7])
+print(listDictNordeste['RN'][3][240680][7])
+print('================================================') 
 
-#Extraia os dados de Teresina/PI apresentando os casos novos com um print.
+# dicio ={}
+# x=[]
+# # print(dicio)
+# x = listDictNordeste[0]
+# # x['RN'][0]
+# for y in x['RN']:
+#     for i in y:
+#         for k,j in i.items():
+#             dicio[k] = j[7]
+#     # for i in range(len(y)):
+# print("Dados de casos novos extraídos de municípios do RN")
+# print(dicio)
+# print('================================================')  
+
+# #Extraia os dados de Teresina/PI apresentando os casos novos com um print.
 
 print('Dados extraídos de casos novos de municípios do estado PI')
-for es in listDictNordeste:
-    for x in es['PI']:
-        for dic in x:
-            for k,y in dic.items():
-                print('Código Município: %d -- Casos Acumulados: %d'%(k,y[7]))
-print('================================================')   
+for es in listDictNordeste['PI']:
+    for k,y in es.items():
+        print('Código Município: %d -- Casos Acumulados: %d'%(k,y[7]))
+print('================================================')
