@@ -1,0 +1,12 @@
+numpy==1.21
+scipy
+matplotlib
+ipython
+jupter
+pandas
+sumpy
+nose
+scikit-learn
+scikit-image
+control
+bokeh
