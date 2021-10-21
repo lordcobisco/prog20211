@@ -1,0 +1,88 @@
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+from coletaDados import ListaGeral
+
+
+# SEPARANDO DADOS POR PERIODO DE CRISE:
+ratosFarmaco1PCrise = [ListaGeral[0][0], ListaGeral[0][1], ListaGeral[0][2], ListaGeral[0][3]]
+ratosFarmaco2PCrise = [ListaGeral[1][0], ListaGeral[1][1], ListaGeral[1][2], ListaGeral[1][3]]
+ratosPlaceboPCrise = [ListaGeral[2][0], ListaGeral[2][1], ListaGeral[2][2], ListaGeral[2][3]]
+
+# TRANSFORMANDO LISTA GERAL EM ARRAY: 3 LISTAS, COM  
+array1 = np.array(ListaGeral).reshape(3, 3, 4)
+
+# Gráfico Pre-Crise:
+print(array1)
+Farmaco1PCSoma = array1[0][0][0] + array1[0][0][1] + array1[0][0][2] + array1[0][0][3]
+Farmaco2PCSoma = array1[0][1][0] + array1[0][1][1] + array1[0][1][2] + array1[0][1][3]
+PlaceboPCSoma = array1[0][2][0] + array1[0][2][1] + array1[0][2][2] + array1[0][2][3]
+
+N = 3  # Numero de elementos
+Farmaco1 = (Farmaco1PCSoma, Farmaco2PCSoma, PlaceboPCSoma)
+f1 = (5)
+ind = np.arange(N)
+width = 0.5
+p1 = plt.bar(ind, Farmaco1, width, yerr=f1)
+plt.ylabel('Pontuação')
+plt.title('Pré Crise')
+plt.xticks(ind, ('Farmaco 1', 'Farmaco 2', 'Placebo'))
+plt.yticks(np.arange(0, 60, 5))
+gpc = plt.show()
+
+
+# Gráfico Tempo de Crise:
+Farmaco1TCSoma = array1[1][0][0] + array1[1][0][1] + array1[1][0][2] + array1[1][0][3]
+Farmaco2TCSoma = array1[1][1][0] + array1[1][1][1] + array1[1][1][2] + array1[1][1][3]
+PlaceboTCSoma = array1[1][2][0] + array1[1][2][1] + array1[1][2][2] + array1[1][2][3]
+
+N = 3  # Numero de elementos
+Farmaco1 = (Farmaco1TCSoma, Farmaco2TCSoma, PlaceboTCSoma)
+f1 = (5)
+ind = np.arange(N)
+width = 0.5
+p1 = plt.bar(ind, Farmaco1, width, yerr=f1)
+plt.ylabel('Pontuação')
+plt.title('Tempo de Crise')
+plt.xticks(ind, ('Farmaco 1', 'Farmaco 2', 'Placebo'))
+plt.yticks(np.arange(0, 60, 5))
+gtc = plt.show()
+
+
+# Gráfico Intensidade de Crise:
+Farmaco1ICSoma = array1[2][0][0] + array1[2][0][1] + array1[2][0][2] + array1[2][0][3]
+Farmaco2ICSoma = array1[2][1][0] + array1[2][1][1] + array1[2][1][2] + array1[2][1][3]
+PlaceboICSoma = array1[2][2][0] + array1[2][2][1] + array1[2][2][2] + array1[2][2][3]
+
+N = 3  # Numero de elementos
+Farmaco1 = (Farmaco1ICSoma, Farmaco2ICSoma, PlaceboICSoma)
+f1 = (5)
+ind = np.arange(N)
+width = 0.5
+p1 = plt.bar(ind, Farmaco1, width, yerr=f1)
+plt.ylabel('Pontuação')
+plt.title('Intensidade de Crise')
+plt.xticks(ind, ('Farmaco 1', 'Farmaco 2', 'Placebo'))
+plt.yticks(np.arange(0, 60, 5))
+gic = plt.show()
+
+
+
+'''
+while True:
+    print('Qual gráfico gostaria de exibir?')
+    print('1 - Pré Crise')
+    print('2 - Tempo de Crise')
+    print('3 - Intensidade de Crise')
+    print('0 - Finalizar o programa')
+    r = input()
+    if r == '1':
+        print(gpc)
+    elif r == '2':
+        print(gtc)
+    elif r == '3':
+        print(gic)
+    elif r == '0':
+        print('Fim do programa!')
+        break'''
+

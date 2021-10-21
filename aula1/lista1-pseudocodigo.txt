@@ -1,0 +1,110 @@
+# Sessão: Declarando variaveis
+
+literal nomePaciente, comorbidade, tipoLesao, estaAcoplado, pacienteAfivelado, suspenderPaciente, descerPaciente 
+inteiro ligarZeroG, distanciaExercicio
+real pesoPaciente
+boleano zeroGLigado, modoDinamico, modoEstatico, pacienteAcoplado
+
+# Inicio do código
+
+pacientePronto = Falso
+zeroGLigado = Falso
+naEsteira = Falso
+
+escreva('Marcha ZeroG e Lokomat')
+escreva('')
+escreva('Nome do paciente: ')
+leia(nomePaciente)
+escreva('Peso do paciente: ')
+leia(pesoPaciente)
+escreva('Tipo de lesao(Leve/Moderada ou Grave): ')
+leia(tipoLesao)
+escreva('Comorbidade do paciente: ')
+leia(comorbidade)
+
+se nomePaciente != nulo e peso != nulo e tipoLesao != nulo e comorbidade != nulo entao:
+	se peso < 136 entao:
+		se tipoLesao == 'leve/moderada':
+			escrever('Paciente com as cintas e fitas afiveladas? s/n ')
+			leia(pacienteAfivelado)
+			se pacienteAfivelado == 's' entao:
+				escreva('Digite 1 para ligar o ZeroG')
+				leia(ligarZeroG)
+				se ligarZeroG == 1 entao:
+					zeroGLigado = Verdadeiro
+					escrever('ZeroG ligado')
+					escrever('Digite 's' para suspender o paciente')
+					leia(suspenderPaciente)
+					se suspenderPaciente == 's':
+						pacienteSuspenso = Verdadeiro
+						escreva('Paciente suspenso')
+						se pesoPaciente < 136 e pesoPaciente > 68 entao:
+							modoDinamico = Verdadeiro
+							modoEstatico = Falso
+							escrever('Modo dinâmico')
+							escrever('o procedimento de acoplamento do paciente a órtese foi realizado?(s/n): ')
+							ler(estaAcoplado)
+							se estaAcoplado == 's':
+								pacienteAcoplado = Verdadeiro
+								escrever('Paciente acoplado')
+								escrever('Digite 'd' para descer o paciente')
+								ler(descerPaciente)
+								se descerPaciente == 'd':
+									pacienteSuspenso = Falso
+									escrever('Paciente ao solo')
+									escrever('Informe a distancia para o exercicio: ')
+									ler(distanciaExercicio)
+									distanciaAtual = 0
+									faça {
+										escrever(distanciaAtual)
+										distanciaAtual + 1
+									} (distanciaAtual < distanciaExercicio)
+								senao:
+									escrever('Digite 'd' para descer o paciente')
+							senao:
+								escrever('Paciente nao acoplado')
+
+						se pesoPaciente < 68:
+							modoDinamico = Falso
+							modoEstatico = Verdadeiro
+							escrever('Modo estático')
+							escrever('o procedimento de acoplamento do paciente a órtese foi realizado?(s/n): ')
+							ler(estaAcoplado)
+							se estaAcoplado == 's':
+								pacienteAcoplado = Verdadeiro
+								escrever('Paciente acoplado')
+								escrever('Digite 'd' para descer o paciente')
+								ler(descerPaciente)
+								se descerPaciente == 'd':
+									pacienteSuspenso = Falso
+									escrever('Paciente ao solo')
+									escrever('Informe a distancia para o exercicio: ')
+									ler(distanciaExercicio)
+									faça {
+										escrever(distanciaAtual)
+										distanciaAtual + 1
+									} (distanciaAtual < distanciaExercicio)
+								
+								senao:
+									escrever('Digite 'd' para descer o paciente')
+							senao:
+								escrever('Paciente nao acoplado')
+
+
+					senão:
+						print('Digite 's' para suspender o paciente')
+
+
+				senão:
+					escrever('Digite 1 para ligar o ZeroG')
+			se pacienteAfivelado == 'n' entao:
+				escreva('Afivelar paciente ao ZeroG')
+
+		senão:
+			escrever('Paciente impossibilitado de utilizar o equipamento')
+
+	senão:
+		escrever('Paciente impossibilitado de utilizar o equipamento')
+
+senão:
+	escreva('As Informaçoes obrigatorias nao foram cadastradas')

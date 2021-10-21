@@ -1,0 +1,61 @@
+# Ratos Grupos 1, 2 e placebo(PRE-CRISE): RECEBENDO DADOS
+rato1F1PC, rato2F1PC, rato3F1PC, rato4F1PC = [int(i) for i in input(
+    "Informe o periodo pré-crise dos ratos do grupo 1(Farmaco 1), separados por vírgula: ").split(',')]
+rato1F2PC, rato2F2PC, rato3F2PC, rato4F2PC = [int(i) for i in input(
+    "Informe o periodo pré-crise dos ratos do grupo 2(Farmaco 2), separados por vírgula: ").split(',')]
+rato1PlaPC, rato2PlaPC, rato3PlaPC, rato4PlaPC = [int(i) for i in input(
+    "Informe o periodo pré-crise dos ratos do grupo 3(Placebo), separados por vírgula: ").split(',')]
+# Armazenando dados nas listas:
+ratosFarmaco1PCrise = [rato1F1PC, rato2F1PC, rato3F1PC, rato4F1PC]
+ratosFarmaco2PCrise = [rato1F2PC, rato2F2PC, rato3F2PC, rato4F2PC]
+ratosPlaceboPCrise = [rato1PlaPC, rato2PlaPC, rato3PlaPC, rato4PlaPC]
+'''
+OPCIONAL PARA REFERENCIA DE DADOS
+print('Gráfico: PRE-CRISE')
+print(ratosFarmaco1PCrise)
+print(ratosFarmaco2PCrise)
+print(ratosPlaceboPCrise)
+print('-' * 90)'''
+# -----------------------------------------------------------------------------------------
+# Ratos Grupos 1, 2 e placebo (TEMPO DE CRISE): RECEBENDO DADOS
+rato1F1TC, rato2F1TC, rato3F1TC, rato4F1TC = [int(i) for i in input(
+    "Informe o tempo de crise dos ratos do grupo 1(Farmaco 1), separados por vírgula: ").split(',')]
+rato1F2TC, rato2F2TC, rato3F2TC, rato4F2TC = [int(i) for i in input(
+    "Informe o tempo de crise dos ratos do grupo 2(Farmaco 2), separados por vírgula: ").split(',')]
+rato1PlaTC, rato2PlaTC, rato3PlaTC, rato4PlaTC = [int(i) for i in input(
+    "Informe o tempo de crise dos ratos do grupo 3(Placebo), separados por vírgula: ").split(',')]
+# Armazenando dados nas listas:
+ratosFarmaco1TCrise = [rato1F1TC, rato2F1TC, rato3F1TC, rato4F1TC]
+ratosFarmaco2TCrise = [rato1F2TC, rato2F2TC, rato3F2TC, rato4F2TC]
+ratosPlaceboTCrise = [rato1PlaTC, rato2PlaTC, rato3PlaTC, rato4PlaTC]
+print('Gráfico: TEMPO DE CRISE')
+print(ratosFarmaco1TCrise)
+print(ratosFarmaco2TCrise)
+print(ratosPlaceboTCrise)
+print('-' * 90)
+# ------------------------------------------------------------------------------------------------
+# Ratos Grupos 1, 2 e placebo (INTENSIDADE DA CRISE): RECEBENDO DADOS
+rato1F1IC, rato2F1IC, rato3F1IC, rato4F1IC = [int(i) for i in input(
+    "Informe a intensidade da crise dos ratos do grupo 1(Farmaco 1), separados por vírgula: ").split(',')]
+rato1F2IC, rato2F2IC, rato3F2IC, rato4F2IC = [int(i) for i in input(
+    "Informe a intensidade da crise dos ratos do grupo 2(Farmaco 2), separados por vírgula: ").split(',')]
+rato1PlaIC, rato2PlaIC, rato3PlaIC, rato4PlaIC = [int(i) for i in input(
+    "Informe a intensidade da crise dos ratos do grupo 3(Placebo), separados por vírgula: ").split(',')]
+# Armazenando dados nas listas:
+ratosFarmaco1ICrise = [rato1F1IC, rato2F1IC, rato3F1IC, rato4F1IC]
+ratosFarmaco2ICrise = [rato1F2IC, rato2F2IC, rato3F2IC, rato4F2IC]
+ratosPlaceboICrise = [rato1PlaIC, rato2PlaIC, rato3PlaIC, rato4PlaIC]
+print('Gráfico: INTENSIDADE DA CRISE')
+print(ratosFarmaco1ICrise)
+print(ratosFarmaco2ICrise)
+print(ratosPlaceboICrise)
+print('-' * 90)
+
+# Variaveis para categorias gerais:
+
+# ARMAZENANDO DADOS EM UMA LISTA GERAL
+ListaGeral = [
+    ratosFarmaco1PCrise, ratosFarmaco2PCrise, ratosPlaceboPCrise, # Pré-Crise
+    ratosFarmaco1TCrise, ratosFarmaco2TCrise, ratosPlaceboTCrise, # Tempo de Crise
+    ratosFarmaco1ICrise, ratosFarmaco2ICrise, ratosPlaceboICrise  # Intensidade de crise
+] 
